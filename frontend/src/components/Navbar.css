@@ -82,6 +82,55 @@
     cursor: pointer;
 }
 
+/* Section labels — shown only inside the mobile drawer */
+.nav-section {
+    display: none;
+}
+
+/* Tools dropdown (Macros Calculator + Food Search) */
+.nav-dropdown {
+    position: relative;
+}
+.tools-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.tools-caret {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+.nav-dropdown.open .tools-caret {
+    transform: rotate(180deg);
+}
+.nav-submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0.4rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    background-color: #0F5132;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    z-index: 1101;
+}
+.nav-submenu .nav-link {
+    padding: 0.6rem 1.1rem;
+    font-size: 1.05rem;
+    white-space: nowrap;
+}
+.nav-submenu .nav-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
 /* Responsive Styles — off-canvas sidebar drawer */
 @media (max-width: 768px) {
     /* hamburger pinned left, logo centered on the same row */
@@ -158,5 +207,36 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         text-align: left;
         width: 100%;
+    }
+
+    /* Section labels visible in the drawer */
+    .nav-section {
+        display: block;
+        padding: 1rem 1.5rem 0.4rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Tools toggle = full-width row with the caret pushed right */
+    .tools-toggle {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Submenu expands inline (not as a floating dropdown) */
+    .nav-submenu {
+        position: static;
+        min-width: 0;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.18);
+    }
+    .nav-submenu .nav-link {
+        padding-left: 2.75rem;
+        font-size: 1.05rem;
     }
 }
