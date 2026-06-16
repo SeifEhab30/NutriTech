@@ -28,25 +28,32 @@ def calculate_daily_needs(profile: UserProfile):
     diet = profile.diet_type
     diabetes = bool(profile.diabetes)
 
-    # 🔥 BMR (Harris-Benedict)
+    # 🔥 BMR (Mifflin–St Jeor) — aligned with the meal-planner engine
+    # (app/nutritech/models/user.py) and the Macros Calculator so the calorie
+    # target is identical across Profile, Tracker, Macros Calculator and Planner.
     if gender == "male":
-        bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
+        bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
     else:
-        bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.33 * age)
+        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161
 
     activity_multipliers = {
         "sedentary": 1.2,
         "moderate": 1.55,
-        "active": 1.9
+        "active": 1.725,
     }
 
-    calories = bmr * activity_multipliers.get(activity, 1.2)
+    calories = bmr * activity_multipliers.get(activity, 1.55)
 
     # Calories from the weight goal (canonical vocab + aliases)
     if goal in ("weight_loss", "lose_weight"):
         calories -= 500
     elif goal in ("weight_gain", "muscle_gain", "gain_weight"):
         calories += 350
+
+    # Clamp to the same safe range as the planner engine so the two never
+    # diverge even at extreme inputs (floor 1500 male / 1200 female, ceiling 4500).
+    floor = 1500 if gender == "male" else 1200
+    calories = max(floor, min(4500, calories))
 
     # 🔥 Macros — diabetes flag overrides the diet ratios
     if diabetes:
