@@ -18,7 +18,6 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [nationality, setNationality] = useState('EGYPTIAN');
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
@@ -38,7 +37,7 @@ const Register = () => {
         }
 
         try {
-            await register(name, email, password, nationality);
+            await register(name, email, password);
             setSuccess(true);
             setTimeout(() => {
                 navigate('/login');
@@ -107,14 +106,6 @@ const Register = () => {
                             </ul>
                         </div>
                     )}
-                </div>
-                <div className="form-group">
-                    <label htmlFor="nationality">Nationality</label>
-                    <select id="nationality" value={nationality} onChange={(e) => setNationality(e.target.value)}>
-                        <option value="EGYPTIAN">EGYPTIAN</option>
-                        <option value="ARAB">ARAB</option>
-                        <option value="OTHER">OTHER</option>
-                    </select>
                 </div>
                 <button type="submit">Create Account</button>
                 <p className="auth-switch">

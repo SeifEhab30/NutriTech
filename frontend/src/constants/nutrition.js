@@ -20,11 +20,6 @@ export const DIET_TYPES = [
   { value: "keto", label: "Keto", goal: "weight_loss" },
 ];
 
-export const CUISINES = [
-  { value: "any", label: "Any" },
-  { value: "egyptian", label: "Egyptian" },
-];
-
 // Restriction/preference checklist -> stored in `dislikes`
 export const RESTRICTIONS = [
   { value: "vegetarian", label: "Vegetarian" },

@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 
 from app.nutritech.core.config import (
+    ALLERGEN_EXPANSIONS,
     DEFAULT_MAX_GRAMS,
     MIN_PORTION_MULT,
     MAX_PORTION_MULT,
@@ -64,10 +65,15 @@ def knn_find_substitute(
     *,
     used_names: Optional[set] = None,
     dislikes: Optional[List[str]] = None,
+    allergies: Optional[List[str]] = None,
     prefer_same_cluster: bool = True,
     top_k: int = 5,
 ) -> List[pd.Series]:
-    """Nearest foods (same role) to `original` by scaled macro vector."""
+    """Nearest foods (same role) to `original` by scaled macro vector.
+
+    `allergies` are a hard exclude (allergen expansions); `dislikes` are the
+    user's restrictions/preferences — both keep unwanted foods out of the swaps.
+    """
     cand = store.df.copy()
     cand = cand[cand["role"] == original.get("role")]
     cand = cand[cand["name"].astype(str).str.lower() != str(original["name"]).strip().lower()]
@@ -77,6 +83,8 @@ def knn_find_substitute(
     if used_names:
         low = {str(x).strip().lower() for x in used_names}
         cand = cand[~cand["name"].astype(str).str.lower().isin(low)]
+    if allergies:
+        cand = apply_dislikes(cand, allergies, ALLERGEN_EXPANSIONS)
     if dislikes:
         cand = apply_dislikes(cand, dislikes)
     if prefer_same_cluster and "cluster" in cand.columns and "cluster" in original:
@@ -113,6 +121,7 @@ def get_substitute_options(
     store,
     *,
     dislikes: Optional[List[str]] = None,
+    allergies: Optional[List[str]] = None,
     prefer_same_cluster: bool = False,
     top_k: int = 6,
 ) -> List[Dict[str, Any]]:
@@ -130,6 +139,7 @@ def get_substitute_options(
         original, store,
         used_names=_used_names(plan),
         dislikes=dislikes,
+        allergies=allergies,
         prefer_same_cluster=prefer_same_cluster,
         top_k=top_k,
     )
@@ -172,6 +182,7 @@ def replace_disliked_in_daily_plan(
     store,
     *,
     dislikes: Optional[List[str]] = None,
+    allergies: Optional[List[str]] = None,
     prefer_same_cluster: bool = True,
 ) -> Dict[str, Any]:
     slot, key, item = _find_in_plan(plan, disliked_name)
@@ -188,6 +199,7 @@ def replace_disliked_in_daily_plan(
         original, store,
         used_names=_used_names(plan),
         dislikes=dislikes,
+        allergies=allergies,
         prefer_same_cluster=prefer_same_cluster,
     )
     if not subs:

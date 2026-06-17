@@ -1,10 +1,10 @@
-const BASE_URL = "http://127.0.0.1:8000";
+import { BASE_URL } from "./config";
 
-export async function register(name, email, password, nationality) {
+export async function register(name, email, password) {
   const res = await fetch(`${BASE_URL}/auth/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, password, nationality }),
+    body: JSON.stringify({ name, email, password }),
   });
 
   if (!res.ok) {

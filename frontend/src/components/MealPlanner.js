@@ -10,7 +10,7 @@ import {
   getCurrentWeekly,
   saveCurrentWeekly,
 } from "../api/planApi";
-import { CUISINES, RESTRICTIONS, ALLERGENS, humanize } from "../constants/nutrition";
+import { RESTRICTIONS, ALLERGENS, humanize } from "../constants/nutrition";
 import CheckGrid from "./CheckGrid";
 import MealCard from "./MealCard";
 import { usePremium, PremiumLock } from "./PremiumGate";
@@ -38,7 +38,6 @@ const MealPlanner = () => {
 
   // Customize-for-this-plan overrides (otherwise profile values are used).
   const [customize, setCustomize] = useState(false);
-  const [cuisine, setCuisine] = useState("any");
   const [dislikes, setDislikes] = useState([]);
   const [allergies, setAllergies] = useState([]);
 
@@ -78,7 +77,6 @@ const MealPlanner = () => {
   const buildPayload = (extra = {}) => {
     const p = { meals_per_day: meals, snacks_per_day: snacks, ...extra };
     if (customize) {
-      p.cuisine_pref = cuisine;
       p.dislikes = dislikes;
       p.allergies = allergies;
     }
@@ -258,14 +256,6 @@ const MealPlanner = () => {
 
           {customize && (
             <div className="customize-panel">
-              <div className="form-group">
-                <label>Cuisine</label>
-                <select value={cuisine} onChange={(e) => setCuisine(e.target.value)}>
-                  {CUISINES.map((c) => (
-                    <option key={c.value} value={c.value}>{c.label}</option>
-                  ))}
-                </select>
-              </div>
               <div className="form-group">
                 <label>Restrictions</label>
                 <CheckGrid options={RESTRICTIONS} selected={dislikes}

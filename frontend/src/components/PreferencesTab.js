@@ -6,7 +6,6 @@ import {
   GOALS,
   ACTIVITY_LEVELS,
   DIET_TYPES,
-  CUISINES,
   RESTRICTIONS,
   ALLERGENS,
   splitTokens,
@@ -22,7 +21,6 @@ const EMPTY = {
   diet_type: "balanced",
   diabetes: false,
   hypertension: false,
-  cuisine_pref: "any",
   dislikes: [],
   allergies: [],
 };
@@ -49,7 +47,6 @@ const PreferencesTab = () => {
           weight: p.weight ?? "",
           diabetes: !!p.diabetes,
           hypertension: !!p.hypertension,
-          cuisine_pref: p.cuisine_pref || "any",
           dislikes: splitTokens(p.dislikes),
           allergies: splitTokens(p.allergies),
         });
@@ -105,7 +102,6 @@ const PreferencesTab = () => {
         diet_type: form.diet_type,
         diabetes: form.diabetes,
         hypertension: form.hypertension,
-        cuisine_pref: form.cuisine_pref,
         dislikes: form.dislikes,
         allergies: form.allergies,
       });
@@ -181,23 +177,13 @@ const PreferencesTab = () => {
           </div>
         </div>
 
-        <div className="form-row">
-          <div className="form-group">
-            <label>Diet Type</label>
-            <select value={form.diet_type} onChange={(e) => set("diet_type")(e.target.value)}>
-              {dietOptions.map((d) => (
-                <option key={d.value} value={d.value}>{d.label}</option>
-              ))}
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Cuisine Preference</label>
-            <select value={form.cuisine_pref} onChange={(e) => set("cuisine_pref")(e.target.value)}>
-              {CUISINES.map((c) => (
-                <option key={c.value} value={c.value}>{c.label}</option>
-              ))}
-            </select>
-          </div>
+        <div className="form-group">
+          <label>Diet Type</label>
+          <select value={form.diet_type} onChange={(e) => set("diet_type")(e.target.value)}>
+            {dietOptions.map((d) => (
+              <option key={d.value} value={d.value}>{d.label}</option>
+            ))}
+          </select>
         </div>
 
         <div className="form-group">

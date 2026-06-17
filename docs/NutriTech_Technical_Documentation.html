@@ -7,7 +7,9 @@
   :root { --green:#0a5032; --green2:#137a4d; --gold:#b8860b; --ink:#1f2937; --muted:#5b6470; --line:#e2e6ea; }
   * { box-sizing: border-box; }
   body { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink);
-         font-size: 12px; line-height: 1.55; margin: 0; }
+         font-size: 12px; line-height: 1.55; margin: 0;
+         -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   h1,h2,h3,h4 { color: var(--green); line-height: 1.2; }
   h1 { font-size: 30px; margin: 0 0 6px; }
   h2 { font-size: 20px; border-bottom: 3px solid var(--green); padding-bottom: 5px; margin-top: 34px; }
@@ -221,7 +223,8 @@ unit-tested or reused independently of FastAPI.</p>
 frontend/
   src/components/        UI (one file per page/widget) + CSS modules
   src/api/               fetch clients (one per backend resource)
-  src/constants/         shared vocab (cuisines, restrictions, allergens)</code></pre>
+  src/constants/         shared vocab (restrictions, allergens)
+  src/api/config.js      single source for the backend base URL (deploy-friendly)</code></pre>
 </section>
 
 <!-- ============ 5. DATA LAYER ============ -->
@@ -231,7 +234,7 @@ frontend/
 <h3>5.1 SQLite database (<code>nutritech.db</code>) — 6 tables</h3>
 <table>
   <tr><th>Table</th><th>Purpose</th><th>Key columns</th></tr>
-  <tr><td><code>users</code></td><td>Accounts</td><td>name, email (unique), hashed_password, nationality, is_active, <b>is_premium</b></td></tr>
+  <tr><td><code>users</code></td><td>Accounts</td><td>name, email (unique), hashed_password, is_active, <b>is_premium</b> (<code>nationality</code> column retained but optional &mdash; no longer collected at registration)</td></tr>
   <tr><td><code>user_profiles</code></td><td>One profile per user (1:1)</td><td>age, gender, height, weight, activity_level, general_goal, diet_type, diabetes, hypertension, cuisine_pref, dislikes, allergies</td></tr>
   <tr><td><code>daily_logs</code></td><td>Tracker entries</td><td>user_id, date (YYYY-MM-DD), name, grams, calories/protein/carbs/fat, source, created_at</td></tr>
   <tr><td><code>saved_plans</code></td><td>Last generated plan per user</td><td>user_id, plan_json (daily), weekly_json</td></tr>
@@ -382,8 +385,9 @@ what Seminar 2 actually describes.</div>
         <li>keto: <code>1.6·fat + 1.0·protein − 0.8·carbs − 0.5·sugar − …</code></li>
         <li>diabetes: <code>2.0·fiber + 1.2·protein − 1.2·sugar − 0.15·carbs − …</code></li>
       </ul>
-      Scores are shifted positive; Egyptian foods get a mild ×1.10 boost (×1.35 if the user asked for
-      Egyptian cuisine).</li>
+      Scores are shifted positive; Egyptian foods get a mild ×1.10 boost. (The engine also supports a
+      stronger ×1.35 cuisine-preference boost, but the cuisine selector was removed from the UI, so
+      plans now always use the mild baseline boost.)</li>
 </ol>
 
 <h3>8.6 Day structure &amp; calorie splits (<code>config.py</code>)</h3>
@@ -440,9 +444,14 @@ target. Self-tests across all meal/snack combinations show worst-case deviation 
 <h3>8.10 Substitution — swapping a food (<code>knn_substitute.py</code>)</h3>
 <p>In the daily view the user can swap any food. <code>get_substitute_options()</code> finds the
 food's row, then <code>knn_find_substitute()</code> returns the nearest neighbours <b>of the same
-role</b> by standardized macro vector (preferring the same cluster, excluding garnishes, already-used
-foods, and disliked items). Each option is re-priced to the original item's calories. Choosing one
+role</b> by standardized macro vector (preferring the same cluster, excluding garnishes and
+already-used foods). Each option is re-priced to the original item's calories. Choosing one
 calls <code>apply_named_substitute()</code>, which re-solves grams and refreshes the meal totals.</p>
+<div class="note"><b>Same exclusions as the planner.</b> The substitute endpoints are authenticated and
+read the signed-in user's profile, so the suggested swaps honour the same restrictions as a freshly
+generated plan: <b>allergies are a hard exclusion</b> (allergen token expansions) and the user's
+<b>dislikes/preferences are filtered out too</b> (profile values are unioned with any per-plan
+overrides). A swap will never offer a food the user is allergic to or has excluded.</div>
 
 <h3>8.11 Weekly plan</h3>
 <p><code>POST /plan/weekly</code> runs the same pipeline 7 times with consecutive seeds (one per day),
@@ -548,8 +557,11 @@ stays free.</p>
   <li><b>Routing</b> (<code>App.js</code>): React Router; protected routes are wrapped in
       <code>RequireAuth</code> (redirects to <code>/login</code> without a token). Premium routes are
       additionally wrapped in <code>PremiumGate</code>.</li>
-  <li><b>API clients</b> (<code>src/api/*.js</code>): one module per resource. <code>client.js</code>
-      centralizes the base URL and injects the JWT header; chat/detection attach it manually.</li>
+  <li><b>API clients</b> (<code>src/api/*.js</code>): one module per resource. Every client resolves the
+      backend through a single <code>config.js</code> (<code>BASE_URL = process.env.REACT_APP_API_URL ||
+      "http://127.0.0.1:8000"</code>) — no hardcoded URLs remain, so deploying only needs the env var
+      set at build time. <code>client.js</code> wraps fetch and injects the JWT header; chat/detection
+      attach it manually but share the same <code>BASE_URL</code>.</li>
   <li><b>Auth state</b>: the JWT lives in <code>localStorage</code>; an <code>authchange</code> window
       event lets the navbar and gates refresh after login/logout/subscribe.</li>
   <li><b>Components</b>: page-level (Home, Login, Register, Profile, MealPlanner, FoodSearch,
@@ -566,7 +578,7 @@ stays free.</p>
 <h2>15. API Reference</h2>
 <table>
   <tr><th>Method &amp; Path</th><th>Auth</th><th>Purpose</th></tr>
-  <tr><td>POST /auth/register</td><td>—</td><td>Create account (password complexity enforced)</td></tr>
+  <tr><td>POST /auth/register</td><td>—</td><td>Create account (name, email, password; password complexity enforced)</td></tr>
   <tr><td>POST /auth/login</td><td>—</td><td>Get JWT</td></tr>
   <tr><td>GET /auth/me</td><td>JWT</td><td>Current user incl. is_premium</td></tr>
   <tr><td>POST /auth/subscribe · /unsubscribe</td><td>JWT</td><td>Mock toggle premium</td></tr>
@@ -577,7 +589,7 @@ stays free.</p>
   <tr><td>POST /plan/weekly</td><td>JWT <span class="tag">Prem</span></td><td>Generate 7-day plan</td></tr>
   <tr><td>GET/PUT/DELETE /plan/current</td><td>JWT</td><td>Saved daily plan</td></tr>
   <tr><td>GET/PUT /plan/weekly/current</td><td>JWT <span class="tag">Prem</span></td><td>Saved weekly plan</td></tr>
-  <tr><td>POST /substitute/ · /options</td><td>JWT</td><td>KNN food swap (apply / list)</td></tr>
+  <tr><td>POST /substitute/ · /options</td><td>JWT</td><td>KNN food swap (apply / list); enforces the user's allergies + dislikes</td></tr>
   <tr><td>POST /detection/detect</td><td>JWT <span class="tag">Prem</span></td><td>Detect food in image</td></tr>
   <tr><td>POST /chat/ask</td><td>JWT <span class="tag">Prem</span></td><td>Chatbot reply</td></tr>
   <tr><td>GET /foods/search</td><td>JWT</td><td>Food macro lookup</td></tr>
@@ -604,6 +616,11 @@ npm start                             # http://localhost:3000</code></pre>
 <code>JWT_SECRET_KEY</code>. Optional: <code>GEMINI_API_KEYS</code> (rotation),
 <code>USDA_API_KEY</code>. The database and model weights are committed, so no extra data setup is
 needed. After editing backend Python, restart Uvicorn (or run with <code>--reload</code>).</p>
+<p><b>Deploying the frontend elsewhere:</b> the API base URL is not hardcoded. Set
+<code>REACT_APP_API_URL</code> to the deployed backend URL at build time (e.g. an
+<code>.env.production</code> entry) before <code>npm run build</code>; with no override it falls back to
+<code>http://127.0.0.1:8000</code> for local development. No code changes are needed to point the app at
+a different backend.</p>
 </section>
 
 <!-- ============ 17. LIMITS ============ -->

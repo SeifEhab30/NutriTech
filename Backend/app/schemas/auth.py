@@ -1,7 +1,7 @@
 import re
 
 from pydantic import BaseModel, EmailStr, Field, field_validator
-from typing import Literal
+from typing import Literal, Optional
 
 
 # Complexity rules: 8-72 chars (bcrypt cap), at least one each of
@@ -18,7 +18,7 @@ class RegisterRequest(BaseModel):
     name: str = Field(..., min_length=1, max_length=80)
     email: EmailStr
     password: str = Field(..., min_length=8, max_length=72)
-    nationality: str
+    nationality: Optional[str] = None
 
     @field_validator("password")
     @classmethod
@@ -43,7 +43,7 @@ class UserPublic(BaseModel):
     id: int
     name: str
     email: EmailStr
-    nationality: str
+    nationality: Optional[str] = None
     is_premium: bool = False
 
     class Config:

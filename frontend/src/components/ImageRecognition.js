@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { getToken } from '../api/authApi';
+import { BASE_URL } from '../api/config';
 import './ImageRecognition.css';
 
 const ImageRecognition = () => {
@@ -109,7 +110,7 @@ const ImageRecognition = () => {
 
         try {
             const token = getToken();
-            const response = await fetch('http://127.0.0.1:8000/detection/detect', {
+            const response = await fetch(`${BASE_URL}/detection/detect`, {
                 method: 'POST',
                 headers: token ? { Authorization: `Bearer ${token}` } : {},
                 body: formData,

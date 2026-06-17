@@ -1,6 +1,5 @@
 import { getToken } from "./authApi";
-
-const BASE_URL = "http://127.0.0.1:8000";
+import { BASE_URL } from "./config";
 
 export async function askChatbot(message, history = []) {
   const token = getToken();

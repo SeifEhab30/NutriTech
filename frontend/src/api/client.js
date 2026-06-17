@@ -1,8 +1,8 @@
 // Shared API client: one BASE_URL + one auth-aware request() helper.
 import { getToken } from "./authApi";
+import { BASE_URL } from "./config";
 
-export const BASE_URL =
-  process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+export { BASE_URL };
 
 export async function request(endpoint, options = {}) {
   const token = getToken();

@@ -35,7 +35,7 @@ def register(data: RegisterRequest, db: Session = Depends(get_db)):
         name=data.name,
         email=data.email,
         hashed_password=hash_password(data.password),
-        nationality=data.nationality.lower().strip()
+        nationality=(data.nationality or "").lower().strip() or None
     )
 
     db.add(user)
