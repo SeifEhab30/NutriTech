@@ -66,6 +66,11 @@ def full_pipeline(payload: Dict[str, Any], seed: Optional[int] = None) -> Dict[s
         snacks_per_day=user["snacks_per_day"],
         daily_calories=float(info["target_calories"]),
         final_goal=final_goal,
+        macro_targets=(
+            float(info["target_protein"]),
+            float(info["target_carbs"]),
+            float(info["target_fat"]),
+        ),
         seed=seed,
     )
 

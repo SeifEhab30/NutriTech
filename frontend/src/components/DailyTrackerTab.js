@@ -4,7 +4,7 @@ import { getCurrentPlan, getCurrentWeekly } from "../api/planApi";
 import { searchFoods } from "../api/foodsApi";
 import { humanize } from "../constants/nutrition";
 
-const COMPONENT_KEYS = ["main", "side", "optional"];
+const COMPONENT_KEYS = ["main", "side", "optional", "extra"];
 
 const todayStr = () => new Date().toLocaleDateString("en-CA"); // YYYY-MM-DD local
 

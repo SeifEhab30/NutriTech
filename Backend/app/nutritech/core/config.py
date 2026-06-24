@@ -126,18 +126,26 @@ MEAL_SPLITS = {
         "snack_2": 0.10, "dinner": 0.25},
 }
 
+# Ordered component slots a built meal may hold: protein main, carb, veg/fruit,
+# and a fat component. Single source of truth shared by the planner, the
+# substitution service, and the frontend meal card.
+COMPONENT_KEYS = ("main", "side", "optional", "extra")
+
 # Which roles compose each slot. The solver fills these from scored candidates.
 # Roles available in the dataset: main, carb, veg, fruit, fat, side.
 SLOT_TEMPLATES = {
-    "breakfast": ["main", "carb", "fruit"],
-    "lunch":     ["main", "carb", "veg"],
-    "dinner":    ["main", "carb", "veg"],
+    "breakfast": ["main", "carb", "fruit", "fat"],
+    "lunch":     ["main", "carb", "veg", "fat"],
+    "dinner":    ["main", "carb", "veg", "fat"],
     "snack_1":   ["fruit", "fat"],
     "snack_2":   ["side", "fruit"],
 }
 
 # Fallback role templates for dynamically-named slots (meal_3+, snack_3+).
-MEAL_TEMPLATE_DEFAULT = ["main", "carb", "veg"]
+# A small fat component (nuts/seeds/avocado, capped at ROLE_MAX_GRAMS["fat"])
+# is included so meals can reach the diet's fat target; on keto the carb role
+# is already remapped to fat and de-duplicated in _resolve_template.
+MEAL_TEMPLATE_DEFAULT = ["main", "carb", "veg", "fat"]
 SNACK_TEMPLATE_DEFAULT = ["fruit", "fat"]
 
 # Relative calorie weight per main meal (others default to 1.0).

@@ -4,7 +4,7 @@ import { humanize } from "../constants/nutrition";
 // One meal slot's card: component list with an optional per-item swap button,
 // a macro breakdown toggle, and a macro footer. Shared by the daily and weekly
 // planner views.
-const COMPONENT_KEYS = ["main", "side", "optional"];
+const COMPONENT_KEYS = ["main", "side", "optional", "extra"];
 
 const MealCard = ({ slot, meal, onSwap }) => {
   const [expanded, setExpanded] = useState(false);

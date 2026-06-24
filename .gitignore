@@ -80,6 +80,11 @@ docs/build_*.py
 docs/_calorieme_dump.txt
 docs/__pycache__/
 docs/Documents/
+docs
 
 # ===== Detector weights backup left by the exp5->exp6 swap =====
 Backend/app/AI_Models/best.exp5-backup.pt
+
+# ===== Miscellaneous dev-only scripts =====
+Backend/build_poster.py
+Backend/qa_offline_tests.py

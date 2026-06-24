@@ -13,6 +13,7 @@ import pandas as pd
 
 from app.nutritech.core.config import (
     ALLERGEN_EXPANSIONS,
+    COMPONENT_KEYS,
     DEFAULT_MAX_GRAMS,
     MIN_PORTION_MULT,
     MAX_PORTION_MULT,
@@ -40,7 +41,7 @@ def _find_in_plan(plan: Dict[str, Any], target_name: str):
     for slot, meal in (plan.get("meals", {}) or {}).items():
         if not isinstance(meal, dict):
             continue
-        for key in ("main", "side", "optional"):
+        for key in COMPONENT_KEYS:
             it = meal.get(key)
             if isinstance(it, dict) and str(it.get("name", "")).strip().lower() == t:
                 return slot, key, it
@@ -52,7 +53,7 @@ def _used_names(plan: Dict[str, Any]) -> set:
     for meal in (plan.get("meals", {}) or {}).values():
         if not isinstance(meal, dict):
             continue
-        for key in ("main", "side", "optional"):
+        for key in COMPONENT_KEYS:
             it = meal.get(key)
             if isinstance(it, dict) and it.get("name"):
                 used.add(str(it["name"]).strip().lower())
@@ -109,7 +110,7 @@ def _write_back(plan: Dict[str, Any], slot: str, key: str, new_item: Dict[str, A
     new_meal = dict(new_plan["meals"][slot])
     new_meal[key] = new_item
     new_meal["total_calories"] = round(
-        sum(new_meal[k]["calories"] for k in ("main", "side", "optional")
+        sum(new_meal[k]["calories"] for k in COMPONENT_KEYS
             if isinstance(new_meal.get(k), dict)), 1)
     new_plan["meals"][slot] = new_meal
     return new_plan

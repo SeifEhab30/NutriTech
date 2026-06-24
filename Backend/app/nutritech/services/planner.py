@@ -14,6 +14,7 @@ import pandas as pd
 from app.nutritech.core.config import (
     BREAKFAST_MAIN_EXCLUDE,
     BREAKFAST_SIDE_PROTEIN,
+    COMPONENT_KEYS,
     DEFAULT_MAX_GRAMS,
     MAX_PORTION_MULT,
     MEAL_TEMPLATE_DEFAULT,
@@ -129,6 +130,87 @@ def solve_portions(items: List[dict], target_cal: float,
 
 
 # =====================================================
+# MACRO-AWARE PORTION BUDGETING
+# =====================================================
+
+# Which macro each food role primarily contributes to the meal.
+_ROLE_MACRO = {"main": "p", "carb": "c", "fat": "f", "side": "c"}
+_FILLER_ROLES = {"veg", "fruit"}
+_FILLER_SHARE = 0.08      # calorie share reserved per low-calorie filler
+_FILLER_SHARE_CAP = 0.20  # total share fillers may take
+
+
+def _role_calorie_fractions(roles: List[str], split) -> List[float]:
+    """Calorie share per item derived from the diet's macro split (protein,
+    carb, fat energy fractions). Protein-role foods get the protein share,
+    carb-role the carb share, fat-role the fat share; vegetables/fruit get a
+    small fixed filler share. Missing macro buckets have their share
+    redistributed across the present ones. This makes the resulting macro
+    distribution track the target split instead of just total calories."""
+    p_e, c_e, f_e = split
+    idx = {"p": [], "c": [], "f": [], "v": []}
+    for i, role in enumerate(roles):
+        if role in _FILLER_ROLES:
+            idx["v"].append(i)
+        else:
+            idx[_ROLE_MACRO.get(role, "c")].append(i)
+    v_total = min(len(idx["v"]) * _FILLER_SHARE, _FILLER_SHARE_CAP)
+    rem = 1.0 - v_total
+    weights = {"p": p_e if idx["p"] else 0.0,
+               "c": c_e if idx["c"] else 0.0,
+               "f": f_e if idx["f"] else 0.0}
+    wsum = sum(weights.values()) or 1.0
+    frac = [0.0] * len(roles)
+    for b in ("p", "c", "f"):
+        if not idx[b]:
+            continue
+        per = rem * (weights[b] / wsum) / len(idx[b])
+        for i in idx[b]:
+            frac[i] = per
+    if idx["v"]:
+        per_v = v_total / len(idx["v"])
+        for i in idx["v"]:
+            frac[i] = per_v
+    s = sum(frac) or 1.0
+    return [x / s for x in frac]
+
+
+def _macro_portions(items: List[dict], target_cal: float, split,
+                    cap_mult: float = 1.0) -> List[float]:
+    """Grams per item so the meal matches both its calorie target and the diet's
+    macro split. Solves a bounded least-squares fit over [calories, protein,
+    carbohydrate, fat] energy using each food's *actual* per-gram nutrients (so
+    the incidental protein/fat carried by carb or 'lean' foods is accounted for),
+    seeded from a role-based budget and clipped to realistic portion bounds. The
+    whole-day normalization later lands the exact calorie total."""
+    n = len(items)
+    if n == 0 or target_cal <= 0:
+        return [0.0] * n
+    serv = [max(float(it["serving_g"]), 1.0) for it in items]
+    lo = [serv[i] * MIN_PORTION_MULT for i in range(n)]
+    hi = [max(min(serv[i] * MAX_PORTION_MULT * cap_mult,
+                  _role_cap(items[i].get("role")) * cap_mult), lo[i]) for i in range(n)]
+
+    # per-gram energy contributions (kcal): total, protein, carb, fat
+    cal = np.array([max(float(it["kcal_100g"]), 0.0) / 100.0 for it in items])
+    pe = np.array([4.0 * float(it["protein_100g"]) / 100.0 for it in items])
+    ce = np.array([4.0 * float(it["carbs_100g"]) / 100.0 for it in items])
+    fe = np.array([9.0 * float(it["fat_100g"]) / 100.0 for it in items])
+    p_e, c_e, f_e = split
+    A = np.vstack([cal, pe, ce, fe])                       # 4 x n
+    b = np.array([target_cal, p_e * target_cal, c_e * target_cal, f_e * target_cal])
+
+    try:
+        g, *_ = np.linalg.lstsq(A, b, rcond=None)
+    except np.linalg.LinAlgError:
+        g = np.array([_role_calorie_fractions(
+            [str(it.get("role")) for it in items], split)[i] * target_cal /
+            max(cal[i], 1e-6) for i in range(n)])
+    g = [float(min(hi[i], max(lo[i], g[i]))) for i in range(n)]
+    return g
+
+
+# =====================================================
 # FOOD SELECTION
 # =====================================================
 
@@ -211,7 +293,7 @@ def _item_from(row: pd.Series, grams: float) -> Dict[str, Any]:
 
 def _build_meal(slot: str, target_cal: float, cands: pd.DataFrame,
                 used: set, cluster_counts: dict, fg: str,
-                cap_mult: float = 1.0) -> Optional[Dict[str, Any]]:
+                cap_mult: float = 1.0, split=None) -> Optional[Dict[str, Any]]:
     roles = _resolve_template(slot, fg)
     chosen: List[pd.Series] = []
     for role in roles:
@@ -230,13 +312,16 @@ def _build_meal(slot: str, target_cal: float, cands: pd.DataFrame,
         chosen.append(row)
         used.add(row["_name_l"])
 
-    grams = solve_portions([r.to_dict() for r in chosen], target_cal, cap_mult=cap_mult)
+    rows = [r.to_dict() for r in chosen]
+    if split is not None and len(rows) > 1:
+        grams = _macro_portions(rows, target_cal, split, cap_mult=cap_mult)
+    else:
+        grams = solve_portions(rows, target_cal, cap_mult=cap_mult)
     items = [_item_from(chosen[i], grams[i]) for i in range(len(chosen))]
 
-    meal = {"main": items[0],
-            "side": items[1] if len(items) > 1 else None,
-            "optional": items[2] if len(items) > 2 else None,
-            "target_calories": round(float(target_cal), 1)}
+    meal = {"target_calories": round(float(target_cal), 1)}
+    for i, key in enumerate(COMPONENT_KEYS):
+        meal[key] = items[i] if i < len(items) else None
     meal["total_calories"] = round(sum(it["calories"] for it in items), 1)
     return meal
 
@@ -252,11 +337,22 @@ def build_daily_plan(
     snacks_per_day: int = 0,
     daily_calories: float = 2000.0,
     final_goal: str = "maintenance_balanced",
+    macro_targets: Optional[tuple] = None,
     seed: Optional[int] = None,
 ) -> Dict[str, Any]:
 
     if seed is not None:
         np.random.seed(seed)
+
+    # Macro energy split (protein, carb, fat fractions of total calories) used
+    # to budget portions so the plan tracks the diet's macro ratios, not only
+    # its calorie total. Falls back to calorie-only solving when unavailable.
+    split = None
+    if macro_targets is not None and daily_calories > 0:
+        p_g, c_g, f_g = macro_targets
+        split = (4.0 * p_g / daily_calories,
+                 4.0 * c_g / daily_calories,
+                 9.0 * f_g / daily_calories)
 
     n_meals, n_snacks = clamp_meal_counts(meals_per_day, snacks_per_day)
     structure = build_day_structure(n_meals, n_snacks)
@@ -283,7 +379,8 @@ def build_daily_plan(
 
     for slot, share in splits.items():
         target_cal = float(daily_calories) * float(share)
-        meal = _build_meal(slot, target_cal, cands, used, cluster_counts, fg, cap_mult)
+        meal = _build_meal(slot, target_cal, cands, used, cluster_counts, fg,
+                           cap_mult, split=split)
         if meal is not None:
             meals[slot] = meal
 
@@ -310,7 +407,7 @@ def _scale_item(it: Dict[str, Any], new_g: float) -> None:
 def _refresh_totals(meals: Dict[str, Any]) -> None:
     for meal in meals.values():
         meal["total_calories"] = round(
-            sum(meal[k]["calories"] for k in ("main", "side", "optional")
+            sum(meal[k]["calories"] for k in COMPONENT_KEYS
                 if isinstance(meal.get(k), dict)), 1)
 
 
@@ -322,11 +419,34 @@ def _normalize_day(meals: Dict[str, Any], target: float, cap_mult: float = 1.0) 
     onto items still below their cap, iterating until the gap closes or every
     movable item is maxed out."""
     items = [it for meal in meals.values()
-             for key in ("main", "side", "optional")
+             for key in COMPONENT_KEYS
              if isinstance((it := meal.get(key)), dict) and it.get("grams", 0) > 0]
     if not items:
         return
 
+    # Phase 1: proportional scaling. Scaling every item by the same factor
+    # preserves the meal's macro ratios (set by the macro-aware budgeting),
+    # so the day lands on the calorie target without distorting protein/carb/
+    # fat balance. Items pinned at their gram cap leave a residual.
+    for _ in range(6):
+        total = sum(it["calories"] for it in items)
+        if total <= 0:
+            return
+        if abs(target - total) <= 0.005 * target:
+            break
+        factor = target / total
+        moved = False
+        for it in items:
+            cap = _role_cap(it.get("role")) * cap_mult
+            new_g = max(1.0, min(cap, it["grams"] * factor))
+            if abs(new_g - it["grams"]) > 1e-6:
+                moved = True
+            _scale_item(it, new_g)
+        if not moved:
+            break
+
+    # Phase 2: redistribute any residual (from capped items) onto items that
+    # can still move, sharing it by kcal/gram.
     for _ in range(12):
         total = sum(it["calories"] for it in items)
         if total <= 0:
