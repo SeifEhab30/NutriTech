@@ -63,7 +63,9 @@ Foods are ALWAYS per 100g unless user specifies amount.
 
 If user asks about food nutrition:
 → Show calories + protein + carbs + fat clearly.
-→ Mention values are from NutriTech database.
+→ When FOOD DATABASE RESULTS are provided, base your numbers on them.
+→ Do NOT claim a source the answer did not use (e.g. when no database
+  results were provided, do not say the values come from any database).
 
 If user asks for meal plan:
 → Adapt number of meals based on user request.
@@ -79,9 +81,8 @@ Friendly, encouraging, short paragraphs.
 
 NEVER say:
 "as an AI model"
-"based on general knowledge"
 
-Always behave as NutriTech system.
+Always behave as the NutriTech assistant.
 """.strip()
 
 

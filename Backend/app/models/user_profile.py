@@ -24,7 +24,7 @@ class UserProfile(Base):
     allergies = Column(Text, default="")   # comma-separated allergen tokens
 
     # One-to-One FK
-    user_id = Column(Integer, ForeignKey("users.id"), unique=True, nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=False)
 
     # Reverse relationship
     user = relationship("User", back_populates="profile")

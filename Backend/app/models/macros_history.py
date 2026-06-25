@@ -8,7 +8,7 @@ class MacrosHistory(Base):
 
     id = Column(Integer, primary_key=True, index=True)
 
-    user_id = Column(Integer, ForeignKey("users.id"))
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"))
 
     calories = Column(Integer)
     protein = Column(Integer)

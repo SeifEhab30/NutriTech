@@ -1,15 +1,22 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# اتصال MySQL (Laragon)
-# DATABASE_URL = "mysql+pymysql://root:@localhost/nutritech"
 DATABASE_URL = "sqlite:///./nutritech.db"
 engine = create_engine(
     DATABASE_URL,
     connect_args={"check_same_thread": False}
 )
 
-engine = create_engine(DATABASE_URL)
+
+# SQLite ignores foreign keys unless this pragma is set on every connection.
+# Without it, ON DELETE CASCADE never fires, so deleting a user leaves orphaned
+# profiles, saved plans, daily logs, and macros history behind.
+@event.listens_for(engine, "connect")
+def _enable_sqlite_foreign_keys(dbapi_connection, connection_record):
+    cursor = dbapi_connection.cursor()
+    cursor.execute("PRAGMA foreign_keys=ON")
+    cursor.close()
+
 
 SessionLocal = sessionmaker(
     autocommit=False,

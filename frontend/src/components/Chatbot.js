@@ -32,7 +32,6 @@ const Chatbot = () => {
 
 I can help with:
 • Nutrition info (try: oats 150g)
-• Meal plans (try: meal plan 2000 kcal)
 • Food alternatives (try: alternatives to chicken)
 
 What would you like?`

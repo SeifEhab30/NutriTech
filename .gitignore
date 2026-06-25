@@ -88,3 +88,8 @@ Backend/app/AI_Models/best.exp5-backup.pt
 # ===== Miscellaneous dev-only scripts =====
 Backend/build_poster.py
 Backend/qa_offline_tests.py
+Backend/chatbot_eval.py
+Backend/chatbot_eval_examples.txt
+Backend/chatbot_eval_results.csv
+Backend/recreate_user_tables.py
+nutritech.db

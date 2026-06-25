@@ -319,7 +319,8 @@ identical — keep this in mind if numbers differ slightly between the planner a
 <h2>8. Feature — Meal Planner (deep dive)</h2>
 <p>This is the most sophisticated subsystem. The core idea: <b>foods are single-ingredient
 "components" tagged with a role; a meal is assembled from roles, and the exact gram amounts are
-SOLVED so each meal — and therefore the whole day — lands on its calorie target by construction.</b>
+SOLVED so each meal — and therefore the whole day — lands on its calorie target by construction, while
+a macro-aware fit keeps protein/carb/fat close to the diet's split.</b>
 This replaced an earlier 960-line cascade of hand-written rules.</p>
 
 <h3>8.1 The dataset: components, roles &amp; tags</h3>
@@ -401,9 +402,11 @@ between meals). <code>build_meal_splits()</code> assigns each slot a share of th
 </ul>
 
 <h3>8.7 Composing a meal — roles, templates &amp; the breakfast rule (<code>planner.py</code>)</h3>
-<p>Each slot has a <b>role template</b> (e.g. breakfast = [main, carb, fruit]; lunch/dinner =
-[main, carb, veg]). Templates are rewritten for the goal: on <b>keto</b>, carb→fat and fruit→veg; on
-<b>diabetes</b>, fruit→veg. For each role the solver <code>_pick()</code>s a food:</p>
+<p>Each slot has a <b>role template</b> (e.g. breakfast = [main, carb, fruit, fat]; lunch/dinner =
+[main, carb, veg, fat]) — every main meal now carries a dedicated <b>fat</b> component so the planner can
+hit the diet's fat target directly instead of relying on incidental fat. Templates are rewritten for the
+goal: on <b>keto</b>, carb→fat and fruit→veg; on <b>diabetes</b>, fruit→veg. For each role the solver
+<code>_pick()</code>s a food:</p>
 <ul>
   <li>From foods of that role not already used, capped to ≤2 per K-Means cluster (variety),
       preferring high-protein mains for HP goals, then takes the top-K by score and samples one
@@ -415,18 +418,25 @@ between meals). <code>build_meal_splits()</code> assigns each slot a share of th
 </ul>
 
 <h3>8.8 The portion solver — the heart of the planner</h3>
-<p>Given the chosen foods and the meal's calorie target, <code>solve_portions()</code> computes grams
-per food with a simple iterative allocator:</p>
-<pre><code>kpg[i] = kcal per gram of food i
-lo[i]  = serving · 0.4         (min realistic portion)
-hi[i]  = min(serving · 2.5, role_cap) · cap_mult   (max realistic portion)
-
-repeat up to 10×:
-    err = target_cal − Σ(g[i]·kpg[i])
-    if |err| small: stop
-    distribute err across movable foods, proportional to their kcal/gram,
-    clamping each to [lo, hi]</code></pre>
+<p>Given the chosen foods, the meal's calorie target, <i>and</i> the diet's macro split,
+<code>_macro_portions()</code> computes grams per food with a <b>bounded least-squares fit over four
+targets at once</b> — calories plus the protein/carbohydrate/fat energy of the meal — so portions track
+the macro split, not just total calories:</p>
+<pre><code># per-gram energy of each food i (kcal):
+cal[i] = kcal/g ;  pe[i] = 4·protein/g ;  ce[i] = 4·carb/g ;  fe[i] = 9·fat/g
+A = [cal, pe, ce, fe]                          # 4 × n
+b = [target_cal, p%·target_cal, c%·target_cal, f%·target_cal]
+g = lstsq(A, b)                                # grams best matching all four targets
+g = clip(g, lo, hi)                            # realistic per-food bounds
+    lo[i] = serving · 0.4
+    hi[i] = min(serving · 2.5, role_cap) · cap_mult</code></pre>
 <ul>
+  <li>Because the fit uses each food's <b>actual</b> per-gram macros, the incidental protein/fat in carb
+      or "lean" foods is accounted for — this is what pulls protein and fat from ~30% off-target (under a
+      calorie-only solve) down to ~13%, while calories stay ~0.4% off.</li>
+  <li>A <b>role-based calorie budget</b> (derived from the macro split) seeds the solve and is the
+      fallback if the matrix is singular. Single-item meals fall back to the older calorie-only
+      <code>solve_portions()</code> iterative allocator.</li>
   <li><b>Role caps</b> (main 300g, carb 250g, veg/fruit 200g, fat 80g…) stop low-calorie produce from
       being scaled into absurd amounts (e.g. 300g of lemon).</li>
   <li><b>Garnishes</b> (parsley, garlic, lemon…) are dropped before composing so they're never scaled

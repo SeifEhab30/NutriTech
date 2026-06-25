@@ -13,5 +13,6 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     is_premium = Column(Boolean, default=False, nullable=False)
 
-    profile = relationship("UserProfile", back_populates="user", uselist=False)
+    profile = relationship("UserProfile", back_populates="user", uselist=False,
+                           cascade="all, delete-orphan", passive_deletes=True)
     # macros_history = relationship("MacrosHistory", back_populates="user")

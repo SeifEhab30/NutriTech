@@ -13,7 +13,7 @@ class DailyLog(Base):
     __tablename__ = "daily_logs"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
     date = Column(String(10), nullable=False, index=True)  # 'YYYY-MM-DD'
 
     name = Column(String(120), nullable=False)
