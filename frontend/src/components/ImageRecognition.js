@@ -110,9 +110,15 @@ const ImageRecognition = () => {
         const formData = new FormData();
         formData.append('image', selectedImage);
         
-        // Add weights override as a JSON string
-        if (Object.keys(weightsOverride).length > 0) {
-            formData.append('weights', JSON.stringify(weightsOverride));
+        // Add weights override as a JSON string. The number inputs store raw
+        // strings, but the API requires numeric grams (> 0), so coerce/filter here.
+        const cleanWeights = {};
+        Object.entries(weightsOverride).forEach(([name, val]) => {
+            const n = parseFloat(val);
+            if (!isNaN(n) && n > 0) cleanWeights[name] = n;
+        });
+        if (Object.keys(cleanWeights).length > 0) {
+            formData.append('weights', JSON.stringify(cleanWeights));
         }
 
         try {

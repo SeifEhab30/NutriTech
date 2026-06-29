@@ -48,8 +48,12 @@ class DetectionService:
                 # Handle potentially missing or zero serving size to avoid division by zero
                 serving_size = food_info.serving_size_g if (food_info.serving_size_g and food_info.serving_size_g > 0) else 100.0
 
-                # Calculate weight: User provided total weight OR (count * default_serving)
-                if user_weights and class_name in user_weights:
+                # Calculate weight: user-provided total weight OR (count * default_serving).
+                # The frontend keys overrides by the food name it was shown (food_info.name);
+                # fall back to the raw class name for safety.
+                if user_weights and food_info.name in user_weights:
+                    actual_weight = float(user_weights[food_info.name])
+                elif user_weights and class_name in user_weights:
                     actual_weight = float(user_weights[class_name])
                 else:
                     actual_weight = serving_size * count
