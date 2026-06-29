@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { login } from '../api/authApi';
+import { login, getCurrentUser } from '../api/authApi';
 import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
+    const [welcome, setWelcome] = useState(null);
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -16,7 +17,11 @@ const Login = () => {
         try {
             await login(email, password);
             window.dispatchEvent(new Event('login'));
-            navigate('/profile');
+            const user = await getCurrentUser();
+            setWelcome(user?.name || '');
+            setTimeout(() => {
+                navigate('/');
+            }, 2000);
         } catch (error) {
             setError(error.message);
         }
@@ -30,6 +35,7 @@ const Login = () => {
                     <p className="auth-sub">Log in to continue to NutriTech</p>
                 </div>
                 {error && <p className="error">{error}</p>}
+                {welcome !== null && <p className="success">Welcome {welcome}!</p>}
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
                     <input

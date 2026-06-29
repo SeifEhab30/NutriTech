@@ -80,7 +80,7 @@ docs/build_*.py
 docs/_calorieme_dump.txt
 docs/__pycache__/
 docs/Documents/
-docs
+docs/
 
 # ===== Detector weights backup left by the exp5->exp6 swap =====
 Backend/app/AI_Models/best.exp5-backup.pt
@@ -93,3 +93,8 @@ Backend/chatbot_eval_examples.txt
 Backend/chatbot_eval_results.csv
 Backend/recreate_user_tables.py
 nutritech.db
+NutriTech_Methods_Diagram.drawio
+NutriTech_Methods_Diagram.svg
+NutriTech_Schema_ERD.drawio
+NutriTech_Schema_ERD.svg
+NutriTech_Thesis_WIP123.docx

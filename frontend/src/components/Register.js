@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { register } from '../api/authApi';
+import { register, login } from '../api/authApi';
 import './Register.css';
 
 // Mirrors the backend complexity rules in app/schemas/auth.py
@@ -38,9 +38,11 @@ const Register = () => {
 
         try {
             await register(name, email, password);
+            await login(email, password);
+            window.dispatchEvent(new Event('login'));
             setSuccess(true);
             setTimeout(() => {
-                navigate('/login');
+                navigate('/profile');
             }, 2000);
         } catch (error) {
             setError(error.message);
@@ -55,7 +57,7 @@ const Register = () => {
                     <p className="auth-sub">Start your journey with NutriTech</p>
                 </div>
                 {error && <p className="error">{error}</p>}
-                {success && <p className="success">Registration successful! Redirecting to login...</p>}
+                {success && <p className="success">Welcome {name}!</p>}
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
                     <input
