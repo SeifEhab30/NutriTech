@@ -4,37 +4,30 @@ Barley,component,120,123.0,2.3,28.2,0.4,3.8,0.3,3.0,carb,intl,"balanced,wl,diab"
 Boiled Potato,component,120,87.0,2.3,19.6,0.2,1.8,1.4,12.0,carb,intl,"balanced,wl,diab","potatoes, red, flesh and skin, baked",https://live.staticflickr.com/2617/3897872846_577a358ee4_b.jpg
 Brown Rice,component,120,123.0,2.7,25.6,1.0,1.6,0.2,4.0,carb,intl,"balanced,wl,diab","rice, brown, long-grain, cooked (includes foods for usda's food distribution program)",https://live.staticflickr.com/134/434662467_b3fec00605_b.jpg
 Bulgur,component,120,83.0,3.1,18.6,0.2,4.5,0.1,5.0,carb,egyptian,"balanced,wl,diab","bulgur, cooked",https://live.staticflickr.com/2921/14031772190_9e5edb9b3b_b.jpg
-Cassava,component,120,160.0,1.4,38.1,0.3,1.8,1.7,14.0,carb,intl,"balanced,wl,wg,diab","cassava, raw",https://live.staticflickr.com/7385/13505071605_624b2f4121_b.jpg
 Couscous,component,120,112.0,3.8,23.2,0.2,1.4,0.1,5.0,carb,egyptian,"balanced,wl,diab","couscous, cooked",https://live.staticflickr.com/1349/1246612602_ef14fb16f7.jpg
 Egg Noodles,component,120,138.0,4.5,25.2,2.1,1.2,0.4,5.0,carb,intl,"balanced,wl,diab","noodles, egg, enriched, cooked",https://live.staticflickr.com/2237/2265439753_49b6ddcb8c_b.jpg
 English Muffin,component,120,235.0,7.7,46.0,1.8,2.7,0.0,464.0,carb,intl,"balanced,wl,wg,diab","english muffins, plain, unenriched, with calcium propionate (includes sourdough)",https://live.staticflickr.com/5052/5393409247_596dc67d4b_b.jpg
 Granola,component,40,471.0,10.1,64.4,19.8,7.0,24.0,30.0,carb,intl,"balanced,wg",(manual entry),https://live.staticflickr.com/4046/4499882995_dbfd0e902d_b.jpg
-Grits,component,120,65.0,1.2,13.9,0.4,0.7,0.1,223.0,carb,intl,"balanced,wl,diab","cereals, corn grits, yellow, regular, quick, enriched, cooked with water, with salt",https://live.staticflickr.com/456/31406622112_64e9e03c76_b.jpg
 Macaroni,component,120,128.0,4.5,26.6,0.1,4.3,1.2,6.0,carb,intl,"balanced,wl,diab","macaroni, vegetable, enriched, cooked",https://live.staticflickr.com/117/260985612_ba245692be_b.jpg
-Millet,component,120,119.0,3.5,23.7,1.0,1.3,0.1,2.0,carb,intl,"balanced,wl,diab","millet, cooked",https://live.staticflickr.com/5282/5246566708_edca7b393b_b.jpg
 Multigrain Bread,component,120,265.0,13.4,43.3,4.2,7.4,6.4,381.0,carb,intl,"balanced,wg","bread, multi-grain (includes whole-grain)",https://live.staticflickr.com/5466/17829272380_6a7cd7e4aa_b.jpg
 Oatmeal (Cooked),component,120,71.0,2.5,12.0,1.5,1.7,0.3,4.0,carb,intl,"balanced,wl,diab","cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt",https://live.staticflickr.com/1035/902342651_6f5cbf610a_b.jpg
 Pasta,component,120,158.0,5.8,30.9,0.9,1.8,0.6,1.0,carb,intl,"balanced,wl,wg,diab","pasta, cooked, enriched, without added salt",https://live.staticflickr.com/4006/4549870013_73d6068409_b.jpg
 Pita Bread,component,120,275.0,9.1,55.7,1.2,2.2,1.3,536.0,carb,egyptian,"balanced,wg,diab","bread, pita, white, enriched",https://live.staticflickr.com/8194/8435225141_bc43164035_b.jpg
-Plantain,component,120,122.0,1.3,31.9,0.4,1.7,17.5,4.0,carb,intl,"balanced,wl","plantains, yellow, raw",https://live.staticflickr.com/281/19362707443_3ae8fb0be9_b.jpg
 Quinoa,component,120,120.0,4.4,21.3,1.9,2.8,0.9,7.0,carb,intl,"balanced,wl,diab","quinoa, cooked",https://live.staticflickr.com/5215/5459511727_ab1cbbf7ba_b.jpg
 Rice Cakes,component,18,387.0,8.2,81.5,2.8,4.2,0.6,26.0,carb,intl,"balanced,wg,diab",(manual entry),https://live.staticflickr.com/7354/9656164568_4ee06ddd4b_b.jpg
 Rice Noodles,component,120,108.0,1.8,24.0,0.2,1.0,0.0,19.0,carb,intl,"balanced,wl,diab","rice noodles, cooked",https://live.staticflickr.com/114/313555548_4e6aea2f6c_b.jpg
 Rye Bread,component,120,259.0,8.5,48.3,3.3,5.8,3.8,603.0,carb,intl,"balanced,wg,diab","bread, rye",https://live.staticflickr.com/2673/4222865830_ce5558dc31_b.jpg
 Sourdough Bread,component,120,270.0,10.3,52.6,2.0,2.8,3.5,477.0,carb,intl,"balanced,wg,diab","muffins, english, plain, toasted, enriched, with calcium propionate (includes sourdough)",https://live.staticflickr.com/5091/5393856690_e97a3881f8_b.jpg
-Spelt,component,120,127.0,5.5,26.4,0.8,3.9,0.0,5.0,carb,intl,"balanced,wl,diab","spelt, cooked",https://live.staticflickr.com/3128/2745932231_f6d64d351f_b.jpg
 Sweet Potato,component,120,90.0,2.0,20.7,0.2,3.3,6.5,246.0,carb,intl,"balanced,wl","sweet potato, cooked, baked in skin, flesh, with salt",https://live.staticflickr.com/1135/4727678141_bf976c4b00.jpg
 Taro,component,120,142.0,0.5,34.6,0.1,5.1,0.5,251.0,carb,intl,"balanced,wl,diab","taro, cooked, with salt",https://live.staticflickr.com/1370/626245963_45390ac8ea_b.jpg
 Tortilla,component,120,218.0,5.7,44.6,2.8,6.3,0.9,45.0,carb,intl,"balanced,wl,wg,diab","tortillas, ready-to-bake or -fry, corn",https://live.staticflickr.com/2294/13084804685_1831c61c8f_b.jpg
 White Bread,component,120,267.0,8.2,49.6,3.6,2.3,4.3,298.0,carb,intl,"balanced,wg,diab","bread, white, commercially prepared, low sodium, no salt",https://live.staticflickr.com/4068/5076899884_31824a869d_b.jpg
 White Rice,component,120,130.0,2.4,28.7,0.2,0.0,0.0,0.0,carb,intl,"balanced,wl,diab","rice, white, short-grain, enriched, cooked",https://live.staticflickr.com/159/429065642_50df514e27_b.jpg
 Whole Wheat Bread,component,120,252.0,12.4,42.7,3.5,6.0,4.3,455.0,carb,intl,"balanced,wg,diab","bread, whole-wheat, commercially prepared",https://live.staticflickr.com/2213/1603076490_d5fbe904d9_b.jpg
-Wild Rice,component,120,101.0,4.0,21.3,0.3,1.8,0.7,3.0,carb,intl,"balanced,wl,diab","wild rice, cooked",https://live.staticflickr.com/2572/3723221185_62c122611b_b.jpg
 Yam,component,120,116.0,1.5,27.5,0.1,3.9,0.5,8.0,carb,intl,"balanced,wl,diab","yam, cooked, boiled, drained, or baked, without salt",https://live.staticflickr.com/35/70320951_344344268d_b.jpg
 Almond Butter,component,30,614.0,21.0,18.8,55.5,10.3,6.3,227.0,fat,intl,"balanced,hp,wg","nuts, almond butter, plain, with salt added",https://live.staticflickr.com/4028/4437073541_cc3850e6f1_b.jpg
 Almonds,component,30,579.0,21.2,21.6,49.9,12.5,4.4,1.0,fat,intl,"balanced,hp,wg,diab","nuts, almonds",https://live.staticflickr.com/5102/5605239684_ee76ba7f79_b.jpg
 Avocado,component,30,160.0,2.0,8.5,14.7,6.7,0.7,7.0,fat,intl,"balanced,wl,wg,keto,diab","avocados, raw, all commercial varieties",https://live.staticflickr.com/16/20207342_a3463eb320_b.jpg
-Brazil Nuts,component,30,659.0,14.3,11.7,67.1,7.5,2.3,3.0,fat,intl,"balanced,wg,diab","nuts, brazilnuts, dried, unblanched",https://upload.wikimedia.org/wikipedia/commons/3/3b/Brazil_nut_DSC05477.JPG
 Cashew Butter,component,30,587.0,17.6,27.6,49.4,2.0,0.0,15.0,fat,intl,"balanced,hp,wg,diab","nuts, cashew butter, plain, without salt added",https://live.staticflickr.com/5516/12302033204_41814e4302.jpg
 Cashews,component,30,553.0,18.2,30.2,43.8,3.3,5.9,12.0,fat,intl,"balanced,hp,wg,diab","nuts, cashew nuts, raw",https://live.staticflickr.com/55/132058216_cf0ece32c6_m.jpg
 Chestnuts,component,30,245.0,3.2,53.0,2.2,5.1,10.6,2.0,fat,intl,"balanced,wl,wg","nuts, chestnuts, european, roasted",https://live.staticflickr.com/7357/8723134645_79dbec64d6_b.jpg
@@ -44,15 +37,11 @@ Cream Cheese,component,30,295.0,7.1,3.5,28.6,0.0,3.5,436.0,fat,intl,"balanced,wg
 Flaxseed,component,30,534.0,18.3,28.9,42.2,20.0,1.6,30.0,fat,intl,"balanced,hp,wg,diab","seeds, flaxseed",https://live.staticflickr.com/2424/3975670974_8fce6915d1_b.jpg
 Hazelnuts,component,30,628.0,15.0,16.7,60.8,9.7,4.3,0.0,fat,intl,"balanced,hp,wg,diab","nuts, hazelnuts or filberts",https://live.staticflickr.com/3324/3241989257_ba0896651e_b.jpg
 Heavy Cream,component,30,340.0,2.8,2.8,36.1,0.0,2.9,27.0,fat,intl,"balanced,wg,keto,diab","cream, fluid, heavy whipping",https://live.staticflickr.com/1215/578316463_ed2bd5882d.jpg
-Hemp Seeds,component,30,553.0,31.6,8.7,48.8,4.0,1.5,5.0,fat,intl,"balanced,hp,wg,keto,diab","seeds, hemp seed, hulled",https://live.staticflickr.com/7058/6961361077_da2f366d9c_b.jpg
-Macadamia Nuts,component,30,718.0,7.9,13.8,75.8,8.6,4.6,5.0,fat,intl,"balanced,wg,diab","nuts, macadamia nuts, raw",https://live.staticflickr.com/4/7418133_dd87fd92ad_b.jpg
 Olives,component,30,116.0,0.8,6.0,10.9,1.6,0.0,735.0,fat,egyptian,"balanced,wl,keto,diab","olives, ripe, canned (small-extra large)",https://live.staticflickr.com/7027/6469863455_6f0c7cd45c_b.jpg
 Peanut Butter,component,30,588.0,21.9,24.0,49.5,5.7,6.5,476.0,fat,intl,"balanced,hp,wg","peanut butter, smooth (includes foods for usda's food distribution program)",https://live.staticflickr.com/2040/1938674453_1f06fa4a5c_b.jpg
 Peanuts,component,30,567.0,25.8,16.1,49.2,8.5,4.7,18.0,fat,intl,"balanced,hp,wg,diab","peanuts, all types, raw",https://live.staticflickr.com/2040/1938674453_1f06fa4a5c_b.jpg
 Pecans,component,30,691.0,9.2,13.9,72.0,9.6,4.0,0.0,fat,intl,"balanced,wg,diab","nuts, pecans",https://live.staticflickr.com/7575/15851622665_ff6041924a_b.jpg
-Pine Nuts,component,30,673.0,13.7,13.1,68.4,3.7,3.6,2.0,fat,intl,"balanced,wg,diab","nuts, pine nuts, dried",https://live.staticflickr.com/2215/2126502705_ef6b6ebafc_b.jpg
 Pistachios,component,30,560.0,20.2,27.2,45.3,10.6,7.7,1.0,fat,intl,"balanced,hp,wg","nuts, pistachio nuts, raw",https://live.staticflickr.com/1048/544003603_ab5e6a03c4_b.jpg
-Poppy Seeds,component,30,287.0,11.1,57.4,1.4,1.8,9.1,457.0,fat,intl,"balanced,wg","bagels, plain, enriched, with calcium propionate (includes onion, poppy, sesame), toasted",https://live.staticflickr.com/5300/5457549998_23fe26dd7a_b.jpg
 Pumpkin Seeds,component,30,114.0,24.9,0.0,0.9,0.0,0.0,103.0,fat,intl,"balanced,hp,wl,keto,diab","fish, sunfish, pumpkin seed, cooked, dry heat",https://live.staticflickr.com/6090/6135232708_fe59b68049_m.jpg
 Sesame Seeds,component,30,573.0,17.7,23.4,49.7,11.8,0.3,11.0,fat,egyptian,"balanced,hp,wg,diab","seeds, sesame seeds, whole, dried",https://live.staticflickr.com/2847/11169471894_af97f6a532_b.jpg
 Sunflower Seeds,component,30,584.0,20.8,20.0,51.5,8.6,2.6,9.0,fat,intl,"balanced,hp,wg,diab","seeds, sunflower seed kernels, dried",https://live.staticflickr.com/56/144085146_6fbede91bf_b.jpg
@@ -71,11 +60,9 @@ Fig,component,120,74.0,0.8,19.2,0.3,2.9,16.3,1.0,fruit,intl,"balanced,wl","figs,
 Grapefruit,component,120,42.0,0.8,10.7,0.1,1.6,6.9,0.0,fruit,intl,"balanced,wl","grapefruit, raw, pink and red, all areas",https://live.staticflickr.com/1006/690425508_7663b89fe4_b.jpg
 Grapes,component,120,69.0,0.7,18.1,0.2,0.9,15.5,2.0,fruit,intl,"balanced,wl","grapes, red or green (european type, such as thompson seedless), raw",https://live.staticflickr.com/8462/8012050999_dc7ed02ab7_b.jpg
 Guava,component,120,68.0,2.6,14.3,1.0,5.4,8.9,2.0,fruit,egyptian,"balanced,wl","guavas, common, raw",https://live.staticflickr.com/4010/4485581698_4579810423_b.jpg
-Honeydew,component,120,36.0,0.5,9.1,0.1,0.8,8.1,18.0,fruit,intl,"balanced,wl,keto","melons, honeydew, raw",https://live.staticflickr.com/2809/10040508914_614781c82f_b.jpg
 Kiwi,component,120,61.0,1.1,14.7,0.5,3.0,9.0,3.0,fruit,intl,"balanced,wl","kiwifruit, green, raw",https://live.staticflickr.com/6012/5941766050_c251e9473b_b.jpg
 Lemon,component,120,29.0,1.1,9.3,0.3,2.8,2.5,2.0,fruit,intl,"balanced,wl,keto,diab","lemons, raw, without peel",https://live.staticflickr.com/2069/2236754824_845c54cab3_b.jpg
 Lime,component,120,30.0,0.7,10.5,0.2,2.8,1.7,2.0,fruit,intl,"balanced,wl,diab","limes, raw",https://live.staticflickr.com/7358/9062174331_917b72e7b0_b.jpg
-Lychee,component,120,66.0,0.8,16.5,0.4,1.3,15.2,1.0,fruit,intl,"balanced,wl","litchis, raw",https://live.staticflickr.com/198/446728555_790d193ec6_b.jpg
 Mango,component,120,60.0,0.8,15.0,0.4,1.6,13.7,1.0,fruit,intl,"balanced,wl","mangos, raw",https://live.staticflickr.com/3445/3900552532_443906d696_b.jpg
 Nectarine,component,120,44.0,1.1,10.6,0.3,1.7,7.9,0.0,fruit,intl,"balanced,wl","nectarines, raw",https://live.staticflickr.com/5441/9243427714_d426aaa577_b.jpg
 Orange,component,120,47.0,0.9,11.8,0.2,2.0,0.0,9.0,fruit,intl,"balanced,wl,diab","oranges, raw, navels",https://live.staticflickr.com/5456/7178200974_d5d5890bcb_b.jpg
@@ -83,7 +70,6 @@ Papaya,component,120,43.0,0.5,10.8,0.3,1.7,7.8,8.0,fruit,intl,"balanced,wl","pap
 Passion Fruit,component,120,97.0,2.2,23.4,0.7,10.4,11.2,28.0,fruit,intl,"balanced,wl","passion-fruit, (granadilla), purple, raw",https://live.staticflickr.com/1307/4680565488_fb005238f6_b.jpg
 Peach,component,120,39.0,0.9,9.5,0.2,1.5,8.4,0.0,fruit,intl,"balanced,wl,keto","peaches, yellow, raw",https://live.staticflickr.com/6080/6039373476_581aec1a4b_b.jpg
 Pear,component,120,57.0,0.4,15.2,0.1,3.1,9.8,1.0,fruit,intl,"balanced,wl","pears, raw",https://live.staticflickr.com/4042/5075826879_d728c4d44c_b.jpg
-Persimmon,component,120,70.0,0.6,18.6,0.2,3.6,12.5,1.0,fruit,egyptian,"balanced,wl","persimmons, japanese, raw",https://live.staticflickr.com/3014/2931340978_b9311d1765_b.jpg
 Pineapple,component,120,50.0,0.5,13.1,0.1,1.4,9.8,1.0,fruit,intl,"balanced,wl","pineapple, raw, all varieties",https://live.staticflickr.com/105/301891165_0dbb269ee1_b.jpg
 Plum,component,120,46.0,0.7,11.4,0.3,1.4,9.9,0.0,fruit,intl,"balanced,wl","plums, raw",https://live.staticflickr.com/6003/6012918392_5f362aed17_b.jpg
 Pomegranate,component,120,83.0,1.7,18.7,1.2,4.0,13.7,3.0,fruit,egyptian,"balanced,wl","pomegranates, raw",https://live.staticflickr.com/2728/4086091790_c3fdb512ee_b.jpg
@@ -93,7 +79,6 @@ Raspberries,component,120,52.0,1.2,11.9,0.6,6.5,4.4,1.0,fruit,intl,"balanced,wl,
 Strawberries,component,120,32.0,0.7,7.7,0.3,2.0,4.9,1.0,fruit,intl,"balanced,wl,keto,diab","strawberries, raw",https://live.staticflickr.com/3603/3453868071_4b82dc96db_b.jpg
 Tangerine,component,120,53.0,0.8,13.3,0.3,1.8,10.6,2.0,fruit,intl,"balanced,wl","tangerines, (mandarin oranges), raw",https://live.staticflickr.com/8710/28674721105_92f4dfa18e_b.jpg
 Watermelon,component,120,30.0,0.6,7.6,0.2,0.4,6.2,1.0,fruit,intl,"balanced,wl,keto","watermelon, raw",https://live.staticflickr.com/212/503533058_41ff8ed781_b.jpg
-Adzuki Beans,component,150,128.0,7.5,24.8,0.1,7.3,0.0,244.0,main,intl,"balanced,wl,diab","beans, adzuki, mature seed, cooked, boiled, with salt",https://live.staticflickr.com/7061/7009495413_73a4246f33_b.jpg
 Beef Brisket,component,150,244.0,28.0,0.0,13.8,0.0,0.0,77.0,main,intl,"balanced,hp,wl,wg,keto,diab","beef, brisket, point half, separable lean only, trimmed to 0"" fat, all grades, cooked, braised",https://live.staticflickr.com/7300/9194994779_b91ec742e3_b.jpg
 Beef Flank Steak,component,150,192.0,27.7,0.0,8.2,0.0,0.0,56.0,main,intl,"balanced,hp,wl,wg,keto,diab","beef, flank, steak, separable lean and fat, trimmed to 0"" fat, all grades, cooked, broiled",https://live.staticflickr.com/2283/2300447031_63d12cbbb9_b.jpg
 Beef Liver,component,150,191.0,29.1,5.1,5.3,0.0,0.0,79.0,main,intl,"balanced,hp,wl,wg,keto,diab","beef, variety meats and by-products, liver, cooked, braised",https://live.staticflickr.com/163/390415138_a3cc499230_b.jpg
@@ -105,20 +90,16 @@ Beef Stew Meat (Chuck),component,150,230.0,17.4,0.0,17.3,0.0,0.0,69.0,main,intl,
 Beef Tenderloin,component,150,237.0,18.9,0.6,17.7,0.0,0.0,62.0,main,intl,"balanced,hp,wl,wg,keto,diab","beef, australian, imported, wagyu, loin, tenderloin steak/roast, boneless, separable lean only, aust. marble score 9, raw",https://live.staticflickr.com/2448/3646892644_e610ff8f71_b.jpg
 Black Beans,component,150,130.0,8.2,24.4,0.4,8.3,0.3,239.0,main,intl,"balanced,wl,diab","beans, black turtle, mature seeds, cooked, boiled, with salt",https://live.staticflickr.com/7114/6982554346_f32906b301_b.jpg
 Black-Eyed Peas,component,150,116.0,7.7,20.8,0.5,6.5,3.3,240.0,main,intl,"balanced,wl,diab","cowpeas, common (blackeyes, crowder, southern), mature seeds, cooked, boiled, with salt",https://upload.wikimedia.org/wikipedia/commons/2/21/Les_Black_Eyed_Peas_en_concert_au_VIP_Room_Paris_3.jpg
-Catfish,component,150,105.0,18.5,0.0,2.8,0.0,0.0,50.0,main,intl,"balanced,hp,wl,keto,diab","fish, catfish, channel, wild, cooked, dry heat",https://live.staticflickr.com/43/82909843_cb58198e7f_b.jpg
 Chicken Breast,component,150,165.0,31.0,0.0,3.6,0.0,0.0,74.0,main,intl,"balanced,hp,wl,wg,keto,diab","chicken, broilers or fryers, breast, meat only, cooked, roasted",https://live.staticflickr.com/6050/6220809890_bc9c275f56_b.jpg
 Chicken Drumstick,component,150,169.0,27.5,0.0,5.7,0.0,0.0,80.0,main,intl,"balanced,hp,wl,wg,keto,diab","chicken, broilers or fryers, drumstick, meat only, cooked, stewed",https://live.staticflickr.com/4014/4255397521_34b4b00827_b.jpg
 Chicken Liver,component,150,167.0,24.5,0.9,6.5,0.0,0.0,76.0,main,intl,"balanced,hp,wl,wg,keto,diab","chicken, liver, all classes, cooked, simmered",https://live.staticflickr.com/3159/2695728954_793905a4ef_b.jpg
 Chicken Thigh,component,150,214.0,23.5,0.1,13.8,0.0,0.0,174.0,main,intl,"balanced,hp,wl,wg,keto,diab","chicken, dark meat, thigh, meat and skin, with added solution, cooked, roasted",https://live.staticflickr.com/3380/3578075458_3a73986284_b.jpg
 Chicken Wing,component,150,203.0,30.5,0.0,8.1,0.0,0.0,92.0,main,intl,"balanced,hp,wl,wg,keto,diab","chicken, broilers or fryers, wing, meat only, cooked, roasted",https://live.staticflickr.com/6084/6084035728_0791b14472_b.jpg
 Chickpeas,component,150,164.0,8.9,27.4,2.6,7.6,4.8,243.0,main,intl,"balanced,wl,wg,diab","chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, with salt",https://live.staticflickr.com/1008/1222354710_c724244412_b.jpg
-Clams,component,150,148.0,25.6,5.1,2.0,0.0,0.0,1202.0,main,intl,"balanced,hp,wl,keto,diab","mollusks, clam, mixed species, cooked, moist heat",https://live.staticflickr.com/2062/2461258704_03d5d227ef_b.jpg
 Cod,component,150,105.0,22.8,0.0,0.9,0.0,0.0,78.0,main,intl,"balanced,hp,wl,keto,diab","fish, cod, atlantic, cooked, dry heat",https://live.staticflickr.com/65535/52421179573_773f8f5492_b.jpg
 Corned Beef,component,150,153.0,22.9,0.0,6.1,0.0,0.0,953.0,main,intl,"balanced,hp,wl,wg,keto,diab","corned beef loaf, jellied",https://live.staticflickr.com/8517/8559422255_ddf297e525_b.jpg
-Cornish Hen,component,150,200.0,17.2,0.0,14.0,0.0,0.0,61.0,main,intl,"balanced,hp,wl,wg,keto,diab","chicken, cornish game hens, meat and skin, raw",https://live.staticflickr.com/2771/4103626147_62ea430ce6_b.jpg
 Cottage Cheese,component,150,95.0,10.9,3.0,4.2,0.1,0.4,403.0,main,intl,"balanced,wl,keto,diab","cheese, cottage, with vegetables",https://live.staticflickr.com/2188/1517531815_d2551acc04_b.jpg
 Crab,component,150,90.0,18.5,0.0,1.2,0.0,0.0,539.0,main,intl,"balanced,hp,wl,keto,diab","crustaceans, crab, queen, raw",https://live.staticflickr.com/7185/13923667531_9e0c3b52e2_b.jpg
-Cranberry Beans,component,150,136.0,9.3,24.5,0.5,8.6,0.0,237.0,main,intl,"balanced,wl,diab","beans, cranberry (roman), mature seeds, cooked, boiled, with salt",https://live.staticflickr.com/5085/5356517406_b7a8e29661_b.jpg
 Duck,component,150,201.0,23.5,0.0,11.2,0.0,0.0,65.0,main,intl,"balanced,hp,wl,wg,keto,diab","duck, domesticated, meat only, cooked, roasted",https://live.staticflickr.com/4874/45185407075_a1e845243f_b.jpg
 Edamame (Soybeans),component,150,121.0,11.9,8.9,5.2,5.2,2.2,6.0,main,intl,"balanced,wl,keto,diab","edamame, frozen, prepared",https://live.staticflickr.com/2831/11993914355_80dd12dc8f_b.jpg
 Egg White,component,150,55.0,10.7,2.4,0.0,0.0,0.0,0.0,main,intl,"balanced,wl,keto,diab","eggs, grade a, large, egg white",https://live.staticflickr.com/3138/2705561380_68b6bf0e61_b.jpg
@@ -128,60 +109,39 @@ Ground Beef,component,150,250.0,25.9,0.0,15.4,0.0,0.0,72.0,main,intl,"balanced,h
 Ground Chicken,component,150,143.0,17.4,0.0,8.1,0.0,0.0,60.0,main,intl,"balanced,hp,wl,keto,diab","chicken, ground, raw",https://live.staticflickr.com/3577/3305809294_70d2524f8f_b.jpg
 Ground Lamb,component,150,283.0,24.8,0.0,19.6,0.0,0.0,81.0,main,intl,"balanced,hp,wg,keto,diab","lamb, ground, cooked, broiled",https://live.staticflickr.com/7253/7586278318_bb1187fd27.jpg
 Ground Turkey,component,150,203.0,27.4,0.0,10.4,0.0,0.0,78.0,main,intl,"balanced,hp,wl,wg,keto,diab","turkey, ground, cooked",https://live.staticflickr.com/4116/4889340807_e782ae4e25_b.jpg
-Grouper,component,150,118.0,24.8,0.0,1.3,0.0,0.0,53.0,main,intl,"balanced,hp,wl,keto,diab","fish, grouper, mixed species, cooked, dry heat",https://live.staticflickr.com/8237/8489715858_26a1a9c5d9_b.jpg
-Haddock,component,150,90.0,20.0,0.0,0.6,0.0,0.0,261.0,main,intl,"balanced,hp,wl,keto,diab","fish, haddock, cooked, dry heat",https://live.staticflickr.com/3132/2832649219_78cc75fbf3_b.jpg
-Halibut,component,150,111.0,22.5,0.0,1.6,0.0,0.0,82.0,main,intl,"balanced,hp,wl,keto,diab","fish, halibut, atlantic and pacific, cooked, dry heat",https://live.staticflickr.com/975/41651418672_5dd29619c3_b.jpg
 Hard-Boiled Egg,component,150,155.0,12.6,1.1,10.6,0.0,1.1,124.0,main,intl,"balanced,wl,wg,keto,diab","egg, whole, cooked, hard-boiled",https://live.staticflickr.com/3125/2783967185_c9ec0ac4bf_b.jpg
-Herring,component,150,217.0,24.6,0.0,12.4,0.0,0.0,918.0,main,intl,"balanced,hp,wl,wg,keto,diab","fish, herring, atlantic, kippered",https://live.staticflickr.com/6169/6245055011_b34ac3740a_b.jpg
 Kidney Beans,component,150,127.0,8.7,22.8,0.5,7.4,0.3,238.0,main,intl,"balanced,wl,diab","beans, kidney, red, mature seeds, cooked, boiled, with salt",https://upload.wikimedia.org/wikipedia/commons/8/8b/Kidney_beans.jpg
 Lamb Leg,component,150,191.0,28.3,0.0,7.7,0.0,0.0,68.0,main,intl,"balanced,hp,wl,wg,keto,diab","lamb, leg, whole (shank and sirloin), separable lean only, trimmed to 1/4"" fat, choice, cooked, roasted",https://live.staticflickr.com/7875/32708065298_661815dc6a_b.jpg
 Lamb Loin Chop,component,150,202.0,26.6,0.0,9.8,0.0,0.0,66.0,main,intl,"balanced,hp,wl,wg,keto,diab","lamb, loin, separable lean only, trimmed to 1/4"" fat, choice, cooked, roasted",https://live.staticflickr.com/1225/1237597945_e94180e33c_b.jpg
 Lamb Shoulder,component,150,233.0,26.2,0.0,13.4,0.0,0.0,91.0,main,intl,"balanced,hp,wl,wg,keto,diab","lamb, australian, imported, fresh, shoulder, whole (arm and blade), separable lean only, trimmed to 1/8"" fat, cooked",https://live.staticflickr.com/3597/3697198543_7be1180b72_b.jpg
 Lentils,component,150,116.0,9.0,20.1,0.4,7.9,1.8,2.0,main,intl,"balanced,wl,diab","lentils, mature seeds, cooked, boiled, without salt",https://live.staticflickr.com/26/102791309_e99b16ee6e.jpg
-Lima Beans,component,150,115.0,7.8,20.9,0.4,7.0,2.9,238.0,main,intl,"balanced,wl,diab","lima beans, large, mature seeds, cooked, boiled, with salt",https://live.staticflickr.com/8182/8009669744_6a6b34cdb0_b.jpg
 Mackerel,component,150,205.0,18.6,0.0,13.9,0.0,0.0,90.0,main,intl,"balanced,hp,wl,wg,keto,diab","fish, mackerel, atlantic, raw",https://live.staticflickr.com/213/464311819_846591829f_b.jpg
-Mahi Mahi,component,150,109.0,23.7,0.0,0.9,0.0,0.0,113.0,main,intl,"balanced,hp,wl,keto,diab","fish, mahimahi, cooked, dry heat",https://live.staticflickr.com/3008/2917262898_43bef8b794.jpg
 Mullet (Bouri),component,150,150.0,24.8,0.0,4.9,0.0,0.0,71.0,main,egyptian,"balanced,hp,wl,wg,keto,diab","fish, mullet, striped, cooked, dry heat",https://inaturalist-open-data.s3.amazonaws.com/photos/410364781/original.jpeg
-Mung Beans,component,150,105.0,7.0,19.2,0.4,7.6,2.0,238.0,main,intl,"balanced,wl,diab","mung beans, mature seeds, cooked, boiled, with salt",https://live.staticflickr.com/5529/10476005835_d3a4d4901d_b.jpg
-Mussels,component,150,172.0,23.8,7.4,4.5,0.0,0.0,369.0,main,intl,"balanced,hp,wl,wg,keto,diab","mollusks, mussel, blue, cooked, moist heat",https://live.staticflickr.com/3841/33359471280_05aaaf574a_b.jpg
-Octopus,component,150,164.0,29.8,4.4,2.1,0.0,0.0,460.0,main,intl,"balanced,hp,wl,wg,keto,diab","mollusks, octopus, common, cooked, moist heat",https://live.staticflickr.com/7004/6553841929_58a7439d9a_b.jpg
 Oysters,component,150,81.0,9.4,5.0,2.3,0.0,0.0,106.0,main,intl,"balanced,wl,keto,diab","mollusks, oyster, pacific, raw",https://live.staticflickr.com/101/313854298_98f9c02ba1.jpg
-Perch,component,150,117.0,24.9,0.0,1.2,0.0,0.0,79.0,main,intl,"balanced,hp,wl,keto,diab","fish, perch, mixed species, cooked, dry heat",https://live.staticflickr.com/6142/5952503156_ec325817af_b.jpg
 Pinto Beans,component,150,143.0,9.0,26.2,0.6,9.0,0.3,238.0,main,intl,"balanced,wl,diab","beans, pinto, mature seeds, cooked, boiled, with salt",https://live.staticflickr.com/7392/16254446997_1a6b281d0b_b.jpg
-Pollock,component,150,118.0,24.9,0.0,1.3,0.0,0.0,110.0,main,intl,"balanced,hp,wl,keto,diab","fish, pollock, atlantic, cooked, dry heat",https://live.staticflickr.com/89/210401031_b9ee2b81f7_b.jpg
 Quail,component,150,227.0,25.1,0.0,14.1,0.0,0.0,52.0,main,intl,"balanced,hp,wl,wg,keto,diab","quail, cooked, total edible",https://live.staticflickr.com/2046/2462987456_c9d17a5539_b.jpg
 Salmon,component,150,206.0,22.1,0.0,12.4,0.0,0.0,61.0,main,intl,"balanced,hp,wl,wg,keto,diab","fish, salmon, atlantic, farmed, cooked, dry heat",https://live.staticflickr.com/191/497293505_5b8490998d_b.jpg
 Sardines,component,150,185.0,20.9,0.5,10.4,0.1,0.4,414.0,main,intl,"balanced,hp,wl,wg,keto,diab","fish, sardine, pacific, canned in tomato sauce, drained solids with bone",https://live.staticflickr.com/3600/3444731119_0178971ebf_b.jpg
-Scallops,component,150,111.0,20.5,5.4,0.8,0.0,0.0,667.0,main,intl,"balanced,hp,wl,keto,diab","mollusks, scallop, (bay and sea), cooked, steamed",https://live.staticflickr.com/3191/2602082554_73b3008cc1_b.jpg
-Sea Bass,component,150,124.0,22.7,0.0,3.0,0.0,0.0,88.0,main,intl,"balanced,hp,wl,keto,diab","fish, bass, striped, cooked, dry heat",https://live.staticflickr.com/2826/9861162014_49f7c1fbfd_b.jpg
 Shrimp,component,150,99.0,24.0,0.2,0.3,0.0,0.0,111.0,main,intl,"balanced,hp,wl,keto,diab","crustaceans, shrimp, cooked",https://live.staticflickr.com/3762/13670027443_71096e6686_b.jpg
-Snapper,component,150,128.0,26.3,0.0,1.7,0.0,0.0,57.0,main,intl,"balanced,hp,wl,keto,diab","fish, snapper, mixed species, cooked, dry heat",https://live.staticflickr.com/4071/4464429608_15201c397d_b.jpg
-Sole / Flounder,component,150,86.0,15.2,0.0,2.4,0.0,0.0,363.0,main,intl,"balanced,hp,wl,keto,diab","fish, flatfish (flounder and sole species), cooked, dry heat",https://live.staticflickr.com/5215/5383315187_76a48e829d_b.jpg
 Soybeans,component,150,172.0,18.2,8.4,9.0,6.0,3.0,1.0,main,intl,"balanced,hp,wl,wg,keto,diab","soybeans, mature cooked, boiled, without salt",https://live.staticflickr.com/7294/9621088575_36ec21fc34_b.jpg
 Split Peas,component,150,116.0,8.3,20.5,0.4,8.3,2.9,238.0,main,intl,"balanced,wl,diab","peas, split, mature seeds, cooked, boiled, with salt",https://live.staticflickr.com/4113/5195943086_81a2ea2d11_b.jpg
 Squid (Calamari),component,150,92.0,15.6,3.1,1.4,0.0,0.0,44.0,main,intl,"balanced,hp,wl,keto,diab","mollusks, squid, mixed species, raw",https://live.staticflickr.com/2104/2493556325_89e67802c5.jpg
-Swordfish,component,150,172.0,23.4,0.0,7.9,0.0,0.0,97.0,main,intl,"balanced,hp,wl,wg,keto,diab","fish, swordfish, cooked, dry heat",https://live.staticflickr.com/3063/2865423734_ef02a71279_b.jpg
-Tempeh,component,150,192.0,20.3,7.6,10.8,0.0,0.0,9.0,main,intl,"balanced,hp,wl,wg,keto,diab",tempeh,https://live.staticflickr.com/47/166937490_3e7cb03ec3_b.jpg
 Tilapia,component,150,128.0,26.2,0.0,2.6,0.0,0.0,56.0,main,intl,"balanced,hp,wl,keto,diab","fish, tilapia, cooked, dry heat",https://live.staticflickr.com/7061/6775561028_ea977dee40_b.jpg
 Tofu,component,150,76.0,8.1,1.9,4.8,0.3,0.6,7.0,main,intl,"balanced,wl,keto,diab","tofu, raw, regular, prepared with calcium sulfate",https://live.staticflickr.com/2367/2121536293_6f2742c270_b.jpg
 Trout,component,150,168.0,23.8,0.0,7.4,0.0,0.0,61.0,main,intl,"balanced,hp,wl,wg,keto,diab","fish, trout, rainbow, farmed, cooked, dry heat",https://live.staticflickr.com/3234/2312446398_275b1339fe_b.jpg
 Tuna,component,150,184.0,29.9,0.0,6.3,0.0,0.0,50.0,main,intl,"balanced,hp,wl,wg,keto,diab","fish, tuna, fresh, bluefin, cooked, dry heat",https://live.staticflickr.com/7807/32245781307_9eb048c850_b.jpg
 Turkey Breast,component,150,136.0,29.5,0.0,2.0,0.0,0.0,114.0,main,intl,"balanced,hp,wl,keto,diab","turkey, retail parts, breast, meat only, cooked, roasted",https://live.staticflickr.com/2279/2216383605_edb763cd63_b.jpg
 Turkey Leg,component,150,208.0,27.9,0.0,9.8,0.0,0.0,77.0,main,intl,"balanced,hp,wl,wg,keto,diab","turkey, all classes, leg, meat and skin, cooked, roasted",https://live.staticflickr.com/3033/2981786671_426485d9a2_b.jpg
-Veal Cutlet,component,150,198.0,28.0,0.2,9.5,0.0,0.0,86.0,main,intl,"balanced,hp,wl,wg,keto,diab","veal, loin, chop, separable lean and fat, cooked, grilled",https://live.staticflickr.com/3134/3250148359_bed16b172c_b.jpg
 White Beans,component,150,118.0,8.3,21.1,0.4,7.0,0.0,238.0,main,intl,"balanced,wl,diab","beans, great northern, mature seeds, cooked, boiled, with salt",https://upload.wikimedia.org/wikipedia/commons/9/93/Phaseolus_vulgaris_white_beans%2C_witte_boon.jpg
 Whole Egg,component,150,143.0,12.6,0.7,9.5,0.0,0.4,142.0,main,intl,"balanced,wl,keto,diab","egg, whole, raw, fresh",https://upload.wikimedia.org/wikipedia/commons/4/4d/Pure_dried_whole_eggs_from_the_United_States_of_America.jpg
 Whole Roast Chicken,component,150,223.0,24.0,0.0,13.4,0.0,0.0,73.0,main,intl,"balanced,hp,wl,wg,keto,diab","chicken, roasting, meat and skin, cooked, roasted",https://live.staticflickr.com/3915/15112547626_a3f80c5d66.jpg
 2% Milk,component,100,50.0,3.3,4.8,2.0,0.0,5.1,47.0,side,intl,"balanced,wl,keto,diab","milk, reduced fat, fluid, 2% milkfat, with added vitamin a and vitamin d",https://live.staticflickr.com/3638/3284192111_fc4ca0d009_b.jpg
 Blue Cheese,component,100,353.0,21.4,2.3,28.7,0.0,0.5,1146.0,side,intl,"balanced,hp,wg,keto,diab","cheese, blue",https://live.staticflickr.com/518/32575059692_2863cce110_b.jpg
 Brie,component,100,334.0,20.8,0.4,27.7,0.0,0.4,629.0,side,intl,"balanced,hp,wg,keto,diab","cheese, brie",https://live.staticflickr.com/2101/2031523023_3749aae40e_b.jpg
-Buttermilk,component,100,40.0,3.3,4.8,1.1,0.0,5.4,148.0,side,intl,"balanced,wl,keto,diab","milk, buttermilk, fluid, cultured, lowfat",https://live.staticflickr.com/4117/4858824233_2d4729a566.jpg
 Cheddar Cheese,component,100,403.0,22.9,3.4,33.3,0.0,0.5,653.0,side,intl,"balanced,hp,wg,keto,diab","cheese, cheddar (includes foods for usda's food distribution program)",https://live.staticflickr.com/6178/6266572782_5f8cc03850.jpg
 Dark Chocolate (70-85%),component,25,598.0,7.8,45.9,42.6,10.9,24.0,20.0,side,intl,"balanced,wg",(manual entry),https://live.staticflickr.com/3231/2955218665_2bfa8d2753_b.jpg
 Date Molasses (3asal Eswed),component,20,290.0,1.5,73.0,0.1,0.0,66.0,40.0,side,egyptian,"balanced,wg",(manual entry),
 Feta Cheese,component,100,265.0,14.2,3.9,21.5,0.0,0.0,1139.0,side,egyptian,"balanced,wg,keto,diab","cheese, feta",https://live.staticflickr.com/6070/6089391116_f42ff759f1_b.jpg
-Goat Cheese,component,100,364.0,21.6,0.1,29.8,0.0,0.1,415.0,side,intl,"balanced,hp,wg,keto,diab","cheese, goat, semisoft type",https://live.staticflickr.com/2418/2166922007_a238990a75_b.jpg
-Goat Milk,component,100,69.0,3.6,4.4,4.1,0.0,4.4,50.0,side,intl,"balanced,wl,keto,diab","milk, goat, fluid, with added vitamin d",https://live.staticflickr.com/6034/6855881036_101fff4915_b.jpg
 Gouda,component,100,356.0,24.9,2.2,27.4,0.0,2.2,819.0,side,intl,"balanced,hp,wg,keto,diab","cheese, gouda",https://live.staticflickr.com/65535/52292770381_ee2b70b466_b.jpg
 Honey,component,20,304.0,0.3,82.4,0.0,0.2,82.1,4.0,side,intl,"balanced,wg",(manual entry),https://live.staticflickr.com/2230/3535805377_807788e3e1.jpg
 Hummus,component,100,177.0,4.9,20.1,8.6,4.0,0.3,242.0,side,egyptian,"balanced,wl,wg,diab","hummus, home prepared",https://live.staticflickr.com/5220/5384913459_f2bbbeb55c_b.jpg
@@ -196,13 +156,10 @@ Skim Milk,component,100,35.0,3.4,4.8,0.2,0.0,4.8,52.0,side,intl,"balanced,wl,ket
 Sour Cream,component,100,181.0,7.0,7.0,14.1,0.0,0.3,70.0,side,intl,"balanced,wl,wg,keto,diab","sour cream, reduced fat",https://live.staticflickr.com/1330/804816879_ffe1285a28_b.jpg
 Swiss Cheese,component,100,393.0,27.0,1.4,31.0,0.0,0.0,187.0,side,intl,"balanced,hp,wg,keto,diab","cheese, swiss",https://live.staticflickr.com/2356/2504979711_756c0530ba_b.jpg
 Whole Milk,component,100,61.0,3.5,4.7,3.2,0.0,4.7,46.0,side,intl,"balanced,wl,keto,diab","yogurt, plain, whole milk",https://live.staticflickr.com/4137/4922873299_b62d9746f7_b.jpg
-Acorn Squash,component,100,56.0,1.1,14.6,0.1,4.4,0.0,240.0,veg,intl,"balanced,wl,diab","squash, winter, acorn, cooked, baked, with salt",https://live.staticflickr.com/5494/11347667625_7d1960507e_b.jpg
 Artichoke,component,100,47.0,3.3,10.5,0.2,5.4,1.0,94.0,veg,intl,"balanced,wl,diab","artichokes, (globe or french), raw",https://live.staticflickr.com/7382/9739749225_07e2349275_b.jpg
 Arugula,component,100,25.0,2.6,3.6,0.7,1.6,2.0,27.0,veg,intl,"balanced,wl,keto,diab","arugula, raw",https://live.staticflickr.com/42/74928697_dcc0d87621_b.jpg
 Asparagus,component,100,20.0,2.2,3.9,0.1,2.1,1.9,2.0,veg,intl,"balanced,wl,keto,diab","asparagus, raw",https://live.staticflickr.com/3064/2697879034_9e3cb7fc55_b.jpg
-Bamboo Shoots,component,100,27.0,2.6,5.2,0.3,2.2,3.0,4.0,veg,intl,"balanced,wl,keto,diab","bamboo shoots, raw",https://live.staticflickr.com/3037/2822133385_6b5076ba4a_b.jpg
 Basil,component,100,23.0,3.2,2.6,0.6,1.6,0.3,4.0,veg,intl,"balanced,wl,keto,diab","basil, fresh",https://live.staticflickr.com/1377/933244618_5f7c4c76d6_b.jpg
-Bean Sprouts,component,100,33.0,4.8,4.7,0.6,0.0,0.0,243.0,veg,intl,"balanced,wl,keto,diab","beans, kidney, mature seeds, sprouted, cooked, boiled, drained, with salt",https://live.staticflickr.com/3541/3683922689_c3e880b69a_b.jpg
 Beetroot,component,100,43.0,1.6,9.6,0.2,2.8,6.8,78.0,veg,intl,"balanced,wl,keto","beets, raw",https://live.staticflickr.com/21/94635795_180a8ec392_b.jpg
 Bell Pepper,component,100,26.0,1.0,6.0,0.3,2.1,4.2,4.0,veg,intl,"balanced,wl,keto,diab","peppers, sweet, red, raw",https://live.staticflickr.com/3862/14771872333_5db889c539_b.jpg
 Bok Choy,component,100,13.0,1.5,2.2,0.2,1.0,1.2,65.0,veg,intl,"balanced,wl,keto,diab","cabbage, chinese (pak-choi), raw",https://live.staticflickr.com/8082/8305262988_8c99799e6b_b.jpg
@@ -210,7 +167,6 @@ Broccoli,component,100,34.0,2.8,6.6,0.4,2.6,1.7,33.0,veg,intl,"balanced,wl,keto,
 Brussels Sprouts,component,100,43.0,3.4,9.0,0.3,3.8,2.2,25.0,veg,intl,"balanced,wl,keto,diab","brussels sprouts, raw",https://live.staticflickr.com/2422/3665926988_45b8f7f472_b.jpg
 Butternut Squash,component,100,45.0,1.0,11.7,0.1,2.0,2.2,4.0,veg,intl,"balanced,wl,diab","squash, winter, butternut, raw",https://live.staticflickr.com/47/115462523_6fcf0cc1a1_b.jpg
 Cabbage,component,100,25.0,1.3,5.8,0.1,2.5,3.2,18.0,veg,intl,"balanced,wl,keto,diab","cabbage, raw",https://live.staticflickr.com/8049/8076990249_12f30723b0_b.jpg
-Capers,component,100,23.0,2.4,4.9,0.9,3.2,0.4,2348.0,veg,intl,"balanced,wl,keto,diab","capers, canned",https://live.staticflickr.com/3762/13670027443_71096e6686_b.jpg
 Carrot,component,100,41.0,0.9,9.6,0.2,2.8,4.7,69.0,veg,intl,"balanced,wl,keto,diab","carrots, raw",https://live.staticflickr.com/3034/2336528175_4087c9a948.jpg
 Cauliflower,component,100,25.0,1.9,5.0,0.3,2.0,1.9,30.0,veg,intl,"balanced,wl,keto,diab","cauliflower, raw",https://live.staticflickr.com/7911/47109511002_91c9174f83_b.jpg
 Celery,component,100,14.0,0.7,3.0,0.2,1.6,1.3,80.0,veg,intl,"balanced,wl,keto,diab","celery, raw",https://live.staticflickr.com/3923/14717930525_a49aaa5877_b.jpg
@@ -220,16 +176,13 @@ Collard Greens,component,100,32.0,3.0,5.4,0.6,4.0,0.5,17.0,veg,intl,"balanced,wl
 Cucumber,component,100,15.0,0.6,3.6,0.1,0.5,1.7,2.0,veg,intl,"balanced,wl,keto,diab","cucumber, with peel, raw",https://live.staticflickr.com/1003/4730708709_fff4534973_b.jpg
 Dill,component,100,43.0,3.5,7.0,1.1,2.1,0.0,61.0,veg,egyptian,"balanced,wl,keto,diab","dill weed, fresh",https://live.staticflickr.com/2644/4182290262_6ea1eea89f_b.jpg
 Eggplant,component,100,25.0,1.0,5.9,0.2,3.0,3.5,2.0,veg,egyptian,"balanced,wl,keto,diab","eggplant, raw",https://live.staticflickr.com/3243/3061205576_0e0486ab15_b.jpg
-Endive,component,100,17.0,1.2,3.4,0.2,3.1,0.2,22.0,veg,intl,"balanced,wl,keto,diab","endive, raw",https://live.staticflickr.com/2679/4161073742_b58f704d17.jpg
 Fennel,component,100,31.0,1.2,7.3,0.2,3.1,3.9,52.0,veg,intl,"balanced,wl,keto,diab","fennel, bulb, raw",https://live.staticflickr.com/171/444350238_cdcdb1d16e_b.jpg
 Garlic,component,100,149.0,6.4,33.1,0.5,2.1,1.0,17.0,veg,intl,"balanced,wl,diab","garlic, raw",https://live.staticflickr.com/3169/2705556806_b263a7bbdb_b.jpg
 Green Beans,component,100,33.0,2.3,6.4,0.5,3.4,3.2,3.0,veg,intl,"balanced,wl,keto,diab","beans, snap, green, microwaved",https://live.staticflickr.com/5560/14947740937_8d2a3f113b_b.jpg
 Green Onion,component,100,27.0,1.0,5.7,0.5,1.8,3.9,15.0,veg,intl,"balanced,wl,keto,diab","onions, young green, tops only",https://live.staticflickr.com/7227/7231125574_5f0cf0e4ae_b.jpg
 Green Peas,component,100,81.0,5.4,14.4,0.4,5.7,5.7,5.0,veg,intl,"balanced,wl,diab","peas, green, raw",https://live.staticflickr.com/2075/1785441107_00960b8b32_b.jpg
-Hearts of Palm,component,100,28.0,2.5,4.6,0.6,2.4,0.0,426.0,veg,intl,"balanced,wl,keto,diab","hearts of palm, canned",https://live.staticflickr.com/3539/3424371585_a0738ee30e_b.jpg
 Jalapeno,component,100,29.0,0.9,6.5,0.4,2.8,4.1,3.0,veg,intl,"balanced,wl,keto,diab","peppers, jalapeno, raw",https://live.staticflickr.com/6031/6212607074_faec265563_b.jpg
 Kale,component,100,35.0,2.9,4.4,1.5,4.1,1.0,53.0,veg,intl,"balanced,wl,keto,diab","kale, raw",https://live.staticflickr.com/3571/3559005937_2a3045ffdf_b.jpg
-Kohlrabi,component,100,27.0,1.7,6.2,0.1,3.6,2.6,20.0,veg,intl,"balanced,wl,keto,diab","kohlrabi, raw",https://live.staticflickr.com/8261/8664121533_25df438798_b.jpg
 Leek,component,100,61.0,1.5,14.2,0.3,1.8,3.9,20.0,veg,intl,"balanced,wl,diab","leeks, (bulb and lower leaf-portion), raw",https://live.staticflickr.com/5210/5256124998_059ae504aa_b.jpg
 Lettuce,component,100,15.0,1.4,2.9,0.2,1.3,0.8,28.0,veg,intl,"balanced,wl,keto,diab","lettuce, green leaf, raw",https://live.staticflickr.com/3272/3010140038_93630997ae_b.jpg
 Mint,component,100,44.0,3.3,8.4,0.7,6.8,0.0,30.0,veg,egyptian,"balanced,wl,keto,diab","spearmint, fresh",https://live.staticflickr.com/3123/2336211411_8b19951bc7_b.jpg
@@ -239,20 +192,66 @@ Mustard Greens,component,100,27.0,2.9,4.7,0.4,3.2,1.3,20.0,veg,intl,"balanced,wl
 Okra (Bamia),component,100,33.0,1.9,7.4,0.2,3.2,1.5,7.0,veg,egyptian,"balanced,wl,keto,diab","okra, raw",https://live.staticflickr.com/8590/16017594777_be4a843a8c_b.jpg
 Onion,component,100,40.0,1.1,9.3,0.1,1.7,4.2,4.0,veg,intl,"balanced,wl,keto,diab","onions, raw",https://live.staticflickr.com/21/27978405_a95f7ffc67_b.jpg
 Parsley,component,100,36.0,3.0,6.3,0.8,3.3,0.8,56.0,veg,egyptian,"balanced,wl,keto,diab","parsley, fresh",https://live.staticflickr.com/3169/2705556806_b263a7bbdb_b.jpg
-Parsnip,component,100,75.0,1.2,18.0,0.3,4.9,4.8,10.0,veg,intl,"balanced,wl,diab","parsnips, raw",https://live.staticflickr.com/178/442406192_eb2d12e7b7_b.jpg
 Pumpkin,component,100,26.0,1.0,6.5,0.1,0.5,2.8,1.0,veg,intl,"balanced,wl,keto,diab","pumpkin, raw",https://live.staticflickr.com/3671/10180255635_1d1854b043_b.jpg
 Radish,component,100,16.0,0.7,3.4,0.1,1.6,1.9,39.0,veg,intl,"balanced,wl,keto,diab","radishes, raw",https://live.staticflickr.com/7323/8962116488_abee80237f_b.jpg
 Romaine Lettuce,component,100,17.0,1.2,3.3,0.3,2.1,1.2,8.0,veg,intl,"balanced,wl,keto,diab","lettuce, cos or romaine, raw",https://live.staticflickr.com/6070/6089391116_f42ff759f1_b.jpg
-Rutabaga,component,100,37.0,1.1,8.6,0.2,2.3,4.5,12.0,veg,intl,"balanced,wl,keto,diab","rutabagas, raw",https://upload.wikimedia.org/wikipedia/commons/a/a7/Rutabaga%2C_variety_nadmorska.JPG
 Shallot,component,100,72.0,2.5,16.8,0.1,3.2,7.9,12.0,veg,intl,"balanced,wl","shallots, raw",https://live.staticflickr.com/386/32335829442_72fe556fc2_b.jpg
 Snow Peas,component,100,42.0,2.8,7.6,0.2,2.6,4.0,4.0,veg,intl,"balanced,wl,keto,diab","peas, edible-podded, raw",https://live.staticflickr.com/3263/2704733439_48a3379f4f_b.jpg
-Spaghetti Squash,component,100,27.0,0.7,6.5,0.3,1.4,2.5,254.0,veg,intl,"balanced,wl,keto,diab","squash, winter, spaghetti, cooked, boiled, drained, or baked, with salt",https://live.staticflickr.com/8141/7187749939_ae56fe04ee_b.jpg
 Spinach,component,100,23.0,2.9,3.6,0.4,2.2,0.4,79.0,veg,intl,"balanced,wl,keto,diab","spinach, raw",https://live.staticflickr.com/6155/6188104920_3ff1caa3f5_b.jpg
 Squash,component,100,27.0,0.7,6.5,0.3,1.4,2.5,254.0,veg,intl,"balanced,wl,keto,diab","squash, winter, spaghetti, cooked, boiled, drained, or baked, with salt",https://live.staticflickr.com/2040/2956470308_5fbabc7ea1_b.jpg
 Sweet Corn,component,100,98.0,3.3,23.5,0.8,2.8,0.0,5.0,veg,intl,"balanced,wl,diab","corn, sweet, white, frozen, kernels on cob, unprepared",https://live.staticflickr.com/2487/3752700730_1595aa8c29_b.jpg
 Swiss Chard,component,100,19.0,1.8,3.7,0.2,1.6,1.1,213.0,veg,intl,"balanced,wl,keto,diab","chard, swiss, raw",https://live.staticflickr.com/3593/3557729503_6d8421907f_b.jpg
 Tomato,component,100,18.0,1.0,4.0,0.1,0.7,2.5,11.0,veg,intl,"balanced,wl,keto,diab","tomatoes, red, ripe, cooked",https://live.staticflickr.com/3062/2779759741_af21c3e9c0_b.jpg
 Turnip,component,100,28.0,0.9,6.4,0.1,1.8,3.8,67.0,veg,intl,"balanced,wl,keto,diab","turnips, raw",https://live.staticflickr.com/4132/5031230729_d9217fe7c0_b.jpg
-Water Chestnut,component,100,97.0,1.4,23.9,0.1,3.0,4.8,14.0,veg,intl,"balanced,wl,diab","waterchestnuts, chinese, (matai), raw",https://live.staticflickr.com/3891/14425776547_93eb929254_b.jpg
 Watercress,component,100,11.0,2.3,1.3,0.1,0.5,0.2,41.0,veg,intl,"balanced,wl,keto,diab","watercress, raw",https://live.staticflickr.com/6134/5980079247_d6fdb7db23_b.jpg
 Zucchini,component,100,17.0,1.2,3.1,0.3,1.0,2.5,8.0,veg,intl,"balanced,wl,keto,diab","squash, summer, zucchini, includes skin, raw",https://live.staticflickr.com/7267/7654064656_4f028c7fc1.jpg
+Corn Flakes,component,30,357.0,7.5,84,0.4,3.3,8,729.0,carb,intl,"balanced,wg","cereals ready-to-eat, corn flakes",
+French Fries,component,100,312.0,3.4,41,15,3.8,0.3,210.0,carb,intl,"balanced,wg","potatoes, french fried, all types",
+Croissant,component,60,406.0,8.2,45.8,21,2.6,11.3,424.0,carb,intl,"balanced,wg","croissants, butter",
+Pancakes,component,80,227.0,6.4,28,9.7,1,6,439.0,carb,intl,"balanced,wg","pancakes, plain, prepared",
+Waffles,component,75,291.0,7.9,33,14,2,5,512.0,carb,intl,"balanced,wg","waffles, plain, prepared",
+Hash Browns,component,100,265.0,2.7,28,16,2.6,0.3,330.0,carb,intl,"balanced,wg","potatoes, hash brown",
+French Bread,component,60,272.0,9,52,3,2.3,4,602.0,carb,intl,"balanced,wl,wg","bread, french or vienna",
+Saltine Crackers,component,30,418.0,9,72,10,2.7,1.5,941.0,carb,intl,"balanced,wg","crackers, saltines",
+Cornbread,component,65,330.0,7,46,12,2,12,600.0,carb,intl,"balanced,wg","cornbread, prepared from mix",
+Mashed Potatoes,component,150,113.0,1.9,16.9,4.2,1.5,1.6,317.0,carb,intl,"balanced,wl,diab","potatoes, mashed, prepared",
+Instant Noodles,component,80,436.0,9,63,16,2,2,1300.0,carb,intl,"balanced,wg","noodles, instant ramen, cooked",
+Popcorn,component,30,387.0,12,78,4.5,15,0.9,8.0,carb,intl,"balanced,wl,diab","snacks, popcorn, air-popped",
+Naan,component,90,310.0,9,50,6.5,2,3,450.0,carb,intl,"balanced,wg","bread, naan, plain",
+Beef Bacon,component,30,449.0,31.3,1.4,34.4,0,0,1933.0,main,intl,"balanced,hp,keto","beef, cured, breakfast strips, cooked",
+Beef Luncheon,component,80,248.0,15,3,19,0,1,1000.0,main,egyptian,"balanced,hp,keto",beef luncheon meat,
+Hot Dog,component,50,290.0,10,4,26,0,1,810.0,main,intl,"balanced,wg","frankfurter, beef",
+Beef Sausage,component,60,301.0,13,2,27,0,1,800.0,main,egyptian,"balanced,hp,wg,keto","sausage, beef, cooked",
+Beef Pepperoni,component,30,460.0,21,4,40,0,0,1500.0,main,intl,"balanced,hp,keto","pepperoni, beef",
+Beef Salami,component,30,261.0,14,1.9,21,0,0.5,1140.0,main,intl,"balanced,hp,keto","salami, beef, cooked",
+Smoked Salmon,component,80,117.0,18,0,4.3,0,0,672.0,main,intl,"balanced,hp,wl,keto,diab","fish, salmon, smoked (lox)",
+Canned Tuna,component,100,116.0,26,0,0.8,0,0,247.0,main,intl,"balanced,hp,wl,keto,diab","fish, tuna, light, canned in water, drained",
+Breaded Fish Fillet,component,90,290.0,12,25,17,1,1,400.0,main,intl,"balanced,wg","fish fillet, battered or breaded, fried",
+Chicken Nuggets,component,90,296.0,15,16,19,1,0.5,557.0,main,intl,"balanced,wg","chicken, nuggets, breaded, cooked",
+Meatballs,component,100,197.0,12,5,14,0.5,1,520.0,main,intl,"balanced,hp,wg","meatballs, beef, cooked",
+Falafel,component,100,333.0,13,32,18,5,1,294.0,side,egyptian,"balanced,wg","falafel, home-prepared",
+Basturma,component,60,147.0,22,2,5,0,0,885.0,main,egyptian,"balanced,hp,wl,keto","beef, cured, pastrami",
+Roast Beef (Deli),component,80,117.0,22,1,2.5,0,0,600.0,main,intl,"balanced,hp,wl,keto,diab","beef, roast, deli sliced",
+Butter,component,15,717.0,0.9,0.1,81,0,0.1,11.0,side,intl,"balanced,keto,wg","butter, salted",
+Margarine,component,15,717.0,0.2,0.7,80,0,0,751.0,side,intl,"balanced,keto,wg","margarine, regular, hard",
+Ice Cream,component,70,207.0,3.5,24,11,0.7,21,80.0,side,intl,"balanced,wg","ice cream, vanilla",
+Chocolate Milk,component,200,83.0,3.2,10.3,3.4,0.5,9.5,60.0,side,intl,"balanced,wg","milk, chocolate, reduced fat",
+Labneh,component,60,130.0,8,5,9,0,5,90.0,side,egyptian,"balanced,hp,keto","yogurt, strained (labneh)",
+American Cheese,component,30,300.0,15,8,23,0,5,1300.0,side,intl,"balanced,hp,keto","cheese, pasteurized process, american",
+String Cheese,component,30,328.0,24,2.5,25,0,0.5,640.0,side,intl,"balanced,hp,keto","cheese, mozzarella, low moisture part-skim (string)",
+Pudding,component,110,130.0,2.5,22,3,0.2,17,140.0,side,intl,"balanced,wg","pudding, chocolate, ready-to-eat",
+Olive Oil,component,14,884.0,0,0,100,0,0,2.0,fat,intl,"balanced,keto,wg","oil, olive, extra virgin",
+Vegetable Oil,component,14,884.0,0,0,100,0,0,0.0,fat,intl,"balanced,keto,wg","oil, vegetable, soybean",
+Mixed Nuts,component,30,607.0,20,21,54,7,4,300.0,fat,intl,"balanced,hp,keto,wg","nuts, mixed, dry roasted, with salt",
+Applesauce,component,120,42.0,0.2,11,0.1,1.2,9,3.0,fruit,intl,"balanced,wl","applesauce, canned, unsweetened",
+Mulberries,component,100,43.0,1.4,9.8,0.4,1.7,8,10.0,fruit,egyptian,"balanced,wl,diab","mulberries, raw",
+Dried Apricots,component,40,241.0,3.4,63,0.5,7.3,53,10.0,fruit,intl,"balanced,wg","apricots, dried, sulfured",
+Iceberg Lettuce,component,60,14.0,0.9,3,0.1,1.2,2,10.0,veg,intl,"balanced,wl,diab,keto","lettuce, iceberg, raw",
+Pickles,component,50,11.0,0.3,2.3,0.2,1,1.1,1208.0,veg,intl,"balanced,wl,diab,keto","pickles, cucumber, dill",
+Sauerkraut,component,50,19.0,0.9,4.3,0.1,2.9,1.8,661.0,veg,intl,"balanced,wl,diab,keto","sauerkraut, canned",
+Milk Chocolate,component,30,535.0,7.6,59,30,3.4,52,79.0,side,intl,"balanced,wg","candies, milk chocolate",
+Chocolate Chip Cookies,component,30,488.0,5.7,64,24,2.4,35,330.0,side,intl,"balanced,wg","cookies, chocolate chip",
+Donut,component,60,452.0,4.9,51,25,1.5,23,326.0,side,intl,"balanced,wg","doughnuts, cake-type, plain",
+Sponge Cake,component,70,297.0,5,50,9,0.7,30,250.0,side,intl,"balanced,wg","cake, sponge",
+Potato Chips,component,30,536.0,7,53,35,4.5,0.6,525.0,side,intl,"balanced,wg","snacks, potato chips, salted",
+Rolled Oats,component,40,389.0,16.9,66.3,6.9,10.6,0.99,2.0,carb,intl,"balanced,wl,wg,diab","cereals, oats, regular and quick, dry",

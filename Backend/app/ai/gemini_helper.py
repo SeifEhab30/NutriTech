@@ -222,6 +222,10 @@ class GeminiHelper:
         prompt = "\n".join(parts)
         cfg = types.GenerateContentConfig(
             temperature=temperature, max_output_tokens=max_tokens, top_p=0.95,
+            # gemini-2.5-flash is a thinking model: without this it spends part
+            # of max_output_tokens on hidden reasoning, truncating the visible
+            # reply mid-sentence. 0 disables it; older 2.0 models ignore it.
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
         )
 
         # Try every key in the pool; for each key, try preferred models in order.

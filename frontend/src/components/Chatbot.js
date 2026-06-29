@@ -12,12 +12,13 @@ const Chatbot = () => {
     const [typing, setTyping] = useState(false);
     const [isSending, setIsSending] = useState(false);
 
-    const messagesEndRef = useRef(null);
+    const messagesRef = useRef(null);
     const textareaRef = useRef(null);
     const isMounted = useRef(false);
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        const el = messagesRef.current;
+        if (el) el.scrollTop = el.scrollHeight;
     };
 
     useEffect(() => {
@@ -98,7 +99,7 @@ What would you like?`
                 </div>
 
                 <div className={styles.chatContainer}>
-                    <div className={styles.messages}>
+                    <div className={styles.messages} ref={messagesRef}>
                         {messages.map((msg, index) => (
                             <div key={index} className={`${styles.message} ${styles[msg.role]}`}>
                                 <div className={styles.messageContent}>
@@ -119,8 +120,6 @@ What would you like?`
                                 <span></span>
                             </div>
                         )}
-
-                        <div ref={messagesEndRef} />
                     </div>
 
                     <div className={styles.inputArea}>
